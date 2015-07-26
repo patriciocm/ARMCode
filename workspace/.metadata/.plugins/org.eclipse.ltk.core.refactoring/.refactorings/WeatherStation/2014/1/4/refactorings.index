@@ -1,0 +1,5 @@
+1390172629711	Rename resource 'lpc17xx_libcfg_default.h'
+1390269769467	Move 'diskio.h' to 'SDCard'
+1390269991229	Move 'diskio.c' to 'SDCard'
+1390353731718	Move 1 resources to 'SDCard'
+1390445343387	Move 'ccsbcs.c' to 'SDCard'

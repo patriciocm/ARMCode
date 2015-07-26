@@ -1,0 +1,418 @@
+/*
+===============================================================================
+ Name        : main.c
+ Author      :
+ Version     :
+ Copyright   : Copyright (C)
+ Description : main definition
+===============================================================================
+*/
+#ifdef __USE_CMSIS
+#include "LPC17xx.h"
+#endif
+
+#include <cr_section_macros.h>
+#include <NXP/crp.h>
+#include <math.h>
+#include <stdio.h>
+#include <stdarg.h>
+
+// Variable to store CRP value in. Will be placed automatically
+// by the linker when "Enable Code Read Protect" selected.
+// See crp.h header for more information
+__CRP const unsigned int CRP_WORD = CRP_NO_CRP ;
+
+// TODO: insert other include files here
+#include "adc.h"
+#include "uart.h"
+#include "timer.h"
+#include "auxiliares.h"
+#include "rtc.h"
+#include "ff.h"
+#include "diskio.h"
+
+
+//Vectores de Almacenamiento de Muestras
+volatile uint32_t VectorTiempoMain[MAX_TAMANIO*2];
+volatile uint16_t VectorMedicionesFinal[MAX_TAMANIO/2];
+volatile uint32_t VectorTiempoFinal[MAX_TAMANIO/2];
+
+//Contador de interrupciones del timer0
+extern volatile uint32_t timer0_m0_counter;
+
+volatile uint32_t SysTickCnt;      /* SysTick Counter                    */
+
+void SysTick_Handler (void)
+{
+	static uint32_t div10;
+
+	if (++div10 >= 10) {
+		div10 = 0;
+		disk_timerproc(); /* Disk timer function (100Hz) */
+	}
+	SysTickCnt++;
+}
+
+
+int main(void)
+{
+	//Definiciones utilizadas por el ADC
+	float SUPPLY_VOLTAGE = 3.3;    //en volts
+	double ADC_COUNT_MAX = 4095;
+	float ADC_STEP = SUPPLY_VOLTAGE/ADC_COUNT_MAX;
+	float GAP_VOLTAGE = 0.045; //en volts
+	int GAP_COUNT = GAP_VOLTAGE/ADC_STEP;
+
+	UARTInit(3, 9600);	    //XBEE UART
+	UARTInit(0, 9600);		//RS485 UART
+	uint8_t tramaATransmitir[200];
+
+	tramaATransmitir[0] = 0x7E;
+	tramaATransmitir[1] = 0x00;
+	tramaATransmitir[2] = 0x07;
+	tramaATransmitir[3] = 0x01;
+	tramaATransmitir[4] = 0x01;
+	tramaATransmitir[5] = 0x00;
+	tramaATransmitir[6] = 0x01;
+	tramaATransmitir[7] = 0x00;
+	tramaATransmitir[8] = 0x12;
+
+	uint8_t checksumAux = 0x15;
+
+	//Resetear Valores de Calculo de Volumen
+	resetMediciones();
+
+	//Update variable SystemCoreClock
+	SystemCoreClockUpdate();
+	// Generate interrupt each 1 ms (Se utiliza para la SDCard)
+	SysTick_Config(SystemCoreClock/1000 - 1);
+
+	//Initialize Timer0 (Se utiliza como referencia para detectar senal en ADC)
+	init_timer( 0 );
+	enable_timer(0);
+
+	//Calculo de valor de tension media utilizado para comparar si se guardan futuros valores medidos
+	uint32_t sumatoria = 0;
+	uint32_t cantidadMuestras = 0;
+	uint32_t i;
+
+	//Initialize ADC
+	ADCInit(ADC_CLK);
+	//Start ADC
+	ADCBurstRead();
+
+	while (cantidadMuestras < MAX_TAMANIO*3 )
+	{
+		while (!vectorReady)
+		{}
+
+		if(vectorReady == 1)
+		{
+			for( i=0 ; i< MAX_TAMANIO/2; i++)
+			{	sumatoria += VectorMedicionesMain[i];
+			}
+		}
+		else
+		{
+			for( i=MAX_TAMANIO/2 ; i < MAX_TAMANIO; i++)
+			{	sumatoria += VectorMedicionesMain[i];
+			}
+		}
+		vectorReady = 0;
+		cantidadMuestras+=MAX_TAMANIO/2;
+	}
+
+	//Stop ADC
+	LPC_ADC->ADCR &= ~(0x01 << 16);
+
+	uint32_t promedioCuentas = sumatoria/cantidadMuestras;
+
+	for( i=0 ; i< MAX_TAMANIO; i++)
+	{	VectorMedicionesMain[i] = 0;
+	}
+
+    //Inicializar vector de MedicionesMain
+    VectorMedicionesMain[0] = promedioCuentas;
+    VectorTiempoMain[0] = 0;
+
+    uint8_t falsaGota = 0;
+	int32_t lastMain = 0;
+	int32_t lastFinal = 0;
+	int32_t tiempoInicial = 0;
+	int16_t maxIndice;
+
+	uint16_t auxMuestra[4];
+	uint32_t auxTiempo[4];
+	uint32_t difference = 0;
+	uint8_t largoSenial = 0;
+	uint32_t duracionSenial = 0;
+	uint32_t moduloSenial = 0;
+
+	uint32_t primeraCondicion=0;
+	uint32_t segundaCondicion=0;
+	uint32_t terceraCondicion=0;
+
+	goodmeasures = 0;
+    timer0_m0_counter = 0;
+
+    vectorActivo = 3;
+    vectorReady = FALSE;
+
+    /* Initialize RTC module */
+    RTCInit();
+    RTCStart();
+
+    FATFS Fatfs[_DRIVES];
+    FATFS *fs;				/* Pointer to file system object */
+    FIL File1;
+
+    /* Initialize SD CARD */
+    disk_initialize(0);
+    //long p2;
+    //disk_ioctl(0, GET_SECTOR_COUNT, &p2);
+    f_mount(0, &Fatfs[0]);
+    //f_getfree(0, (DWORD*)&p2, &fs);
+    f_open(&File1, "ArchivoPrueba.txt", 0);
+
+	//Start ADC
+    ADCBurstRead();
+
+	while(1)
+	{
+		 while(!vectorReady)
+		 {}
+
+		 vectorReady = FALSE;
+
+		 if(alarm_on_SD)
+		 {
+		 	alarm_on_SD = FALSE;
+		 	updateDataSD();
+		 }
+
+		 if(alarm_on_XBEE)
+		 {
+			 alarm_on_XBEE = FALSE;
+			 enviarDatos(3);
+		 }
+		 if(alarm_on_RS485)
+		 {
+			 alarm_on_RS485 = FALSE;
+			 enviarDatos(0);
+		 }
+
+
+		 if(VectorMedicionesMain[0] > ADC0Value[0])
+			 difference = VectorMedicionesMain[0] - ADC0Value[0];
+		 else
+			 difference = ADC0Value[0] - VectorMedicionesMain[0];
+
+		 if(difference > GAP_COUNT)
+		 {
+			 switch (largoSenial)
+			 {
+				 case 0x00:
+					 auxMuestra[0] = ADC0Value[0];
+					 auxTiempo[0] = timer0_m0_counter;
+					 largoSenial = 1;
+					 break;
+				 case 0x01:
+					 if( (timer0_m0_counter - auxTiempo[0]) < 10 )
+					 {	 auxTiempo[1] = timer0_m0_counter;
+						 auxMuestra[1] = ADC0Value[0];
+						 largoSenial = 2;
+					 }
+					 else
+					 {	 auxTiempo[0] = timer0_m0_counter;
+						 auxMuestra[0] = ADC0Value[0];
+						 largoSenial = 1;
+					 }
+					 break;
+				 case 0x02:
+					 if( (timer0_m0_counter - auxTiempo[0]) < 10 )
+					 {	 auxTiempo[2] = timer0_m0_counter;
+						 auxMuestra[2] = ADC0Value[0];
+						 largoSenial = 3;
+					 }
+					 else
+					 {	 auxTiempo[0] = timer0_m0_counter;
+						 auxMuestra[0] = ADC0Value[0];
+						 largoSenial = 1;
+					 }
+					 break;
+				 case 0x03:
+					 if( (timer0_m0_counter - auxTiempo[1]) < 10 )
+					 {
+						 auxTiempo[3] = timer0_m0_counter;
+						 auxMuestra[3] = ADC0Value[0];
+
+						 maxIndice = 4;
+						 for( i=4 ; i>0; i--)
+						 {	VectorTiempoMain[i] = auxTiempo[(i-1)];
+							VectorMedicionesMain[i] = auxMuestra[(i-1)];
+							//Calculo de | | total de la senial
+							moduloSenial += VectorMedicionesMain[i];
+							if( VectorMedicionesMain[i] > VectorMedicionesMain[maxIndice])
+								 maxIndice = i;
+						 }
+
+						 lastMain = 4;
+						 goodmeasures = 0;
+
+						 //CALCULO DE LA DURACION DE LA GOTA
+						 int16_t condicionCorte = TRUE;
+						 int32_t lastValidSample = timer0_m0_counter;
+
+						 tiempoInicial = timer0_m0_counter;
+						 while (condicionCorte)
+						 { 	  while(!vectorReady )
+							  {}
+							  vectorReady = FALSE;
+							  if(ADC0Value[0] < GAP_COUNT && timer0_m0_counter > (lastValidSample + 1000) )
+							  {		condicionCorte = FALSE;
+							  }
+							  else
+							  {		if( ADC0Value[0] > GAP_COUNT )
+									{	lastValidSample = timer0_m0_counter;
+									}
+									lastMain++;
+									VectorTiempoMain[lastMain] = timer0_m0_counter;
+									VectorMedicionesMain[lastMain] = ADC0Value[0];
+									//Calculo de | | total de la senial
+									moduloSenial += VectorMedicionesMain[lastMain];
+									if( VectorMedicionesMain[lastMain] > VectorMedicionesMain[maxIndice])
+									{	maxIndice = lastMain;
+									}
+									if(lastMain > 3000 )
+									{	lastMain = 3000;
+									}
+							  }
+						 }
+						 duracionSenial = timer0_m0_counter - tiempoInicial;
+						 float maximo = VectorMedicionesMain[maxIndice]*ADC_STEP;
+
+						 if(maximo > 2.4 && moduloSenial < 300000)
+						 {	 falsaGota = TRUE;
+						 }
+
+						 if(!falsaGota)
+						 {
+							 calcularVolumen(maximo, moduloSenial, duracionSenial);
+
+							 //Cargar en VectorMedicionesFinal y VectorTiempoFinal el pico +- 10 muestras
+							 if(maxIndice < 5)
+							 {
+								 for( i=1 ; i < (maxIndice+6) ; i++)
+								 {	 VectorTiempoFinal[lastFinal] = VectorTiempoMain[i];
+									 VectorMedicionesFinal[lastFinal] = VectorMedicionesMain[i];
+									 lastFinal++;
+								 }
+								 primeraCondicion++;
+							 }
+							 else if (maxIndice > (lastMain-6) )
+							 {
+								 for( i=maxIndice-5 ; i < lastMain ; i++)
+								 {	 VectorTiempoFinal[lastFinal] = VectorTiempoMain[i];
+									 VectorMedicionesFinal[lastFinal] = VectorMedicionesMain[i];
+									 lastFinal++;
+								 }
+								 segundaCondicion++;
+							 }
+							 else
+							 {
+								 for( i=maxIndice-4 ; i < (maxIndice+6) ; i++)
+								 {	 VectorTiempoFinal[lastFinal] = VectorTiempoMain[i];
+									 VectorMedicionesFinal[lastFinal] = VectorMedicionesMain[i];
+									 lastFinal++;
+								 }
+								 terceraCondicion++;
+							 }
+
+							 uint16_t j;
+
+							 //Transmitir los valores de los vectores VectorTiempoMain y VectorMedicionesMain
+							 //por puerto serial
+							 //Cargando 32bits de Duracion de la Senial
+							 tramaATransmitir[9]= duracionSenial >> 24;
+							 tramaATransmitir[10]= duracionSenial >> 16;
+							 tramaATransmitir[11]= duracionSenial >> 8;
+							 tramaATransmitir[12]= duracionSenial;
+							 //Cargando 32bits de Suma de Modulos
+							 tramaATransmitir[13]= moduloSenial >> 24;
+							 tramaATransmitir[14]= moduloSenial >> 16;
+							 tramaATransmitir[15]= moduloSenial >> 8;
+							 tramaATransmitir[16]= moduloSenial;
+
+							 for(j=9; j < 17; j++)
+							 {
+								checksumAux += tramaATransmitir[j];
+							 }
+
+							 for(i=0; i < lastFinal ; i++)
+							 {
+								//Cargando 32bits de Tiempo de la Muestra
+								 tramaATransmitir[17+6*i]= VectorTiempoFinal[i] >> 24;
+								 tramaATransmitir[18+6*i]= VectorTiempoFinal[i] >> 16;
+								 tramaATransmitir[19+6*i]= VectorTiempoFinal[i] >> 8;
+								 tramaATransmitir[20+6*i]= VectorTiempoFinal[i];
+								 //Cargando 16bits Valor de la Muestra
+								 tramaATransmitir[21+6*i]= VectorMedicionesFinal[i] >> 8;
+								 tramaATransmitir[22+6*i]= VectorMedicionesFinal[i];
+
+								//checksum
+								for(j=17; j < 23; j++)
+								{
+									checksumAux += tramaATransmitir[j+6*i];
+								}
+
+							  }
+
+							 tramaATransmitir[2]= (6 + 4 + 4) + lastFinal*6;
+							 tramaATransmitir[3 + tramaATransmitir[2]]= 0xFF - checksumAux;
+							 if(saveSD)
+							 {
+								 saveDropDataSD((uint8_t *)tramaATransmitir);
+							 }
+							 else
+							 {
+								 if(transmitirXBEE)
+								 {	 UARTSend(3, (uint8_t *)tramaATransmitir , 4 + tramaATransmitir[2] );
+								 }
+								 if(transmitirRS485)
+								 { 	 UARTSend(0, (uint8_t *)tramaATransmitir , 4 + tramaATransmitir[2] );
+								 }
+							 }
+
+							 lastFinal = 0;
+							 checksumAux = 0x15;
+
+							 largoSenial = 0;
+							 lastMain = 0;
+							 moduloSenial = 0;
+						 }
+						 falsaGota = FALSE;
+					 }
+					 else
+					 {	 auxTiempo[0] = timer0_m0_counter;
+						 auxMuestra[0] = ADC0Value[0];
+						 largoSenial = 1;
+					 }
+					 break;
+				 default:
+					 break;
+			 }
+		}
+	}
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+

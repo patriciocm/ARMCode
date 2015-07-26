@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;WeatherStation/src/main.old&apos; to &apos;main.debug&apos;" description="Rename resource &apos;main.old&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main.old" name="main.debug" stamp="1390965806411" updateReferences="true"/>
+</session>

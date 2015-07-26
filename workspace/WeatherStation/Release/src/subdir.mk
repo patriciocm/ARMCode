@@ -1,0 +1,66 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../src/adc.c \
+../src/auxiliares.c \
+../src/cr_startup_lpc176x.c \
+../src/diskio.c \
+../src/ff.c \
+../src/lpc17xx_clkpwr.c \
+../src/lpc17xx_gpio.c \
+../src/lpc17xx_pinsel.c \
+../src/lpc17xx_ssp.c \
+../src/main.c \
+../src/rtc.c \
+../src/spi_sd_lpc17xx.c \
+../src/timer.c \
+../src/uart.c \
+../src/xbee.c 
+
+OBJS += \
+./src/adc.o \
+./src/auxiliares.o \
+./src/cr_startup_lpc176x.o \
+./src/diskio.o \
+./src/ff.o \
+./src/lpc17xx_clkpwr.o \
+./src/lpc17xx_gpio.o \
+./src/lpc17xx_pinsel.o \
+./src/lpc17xx_ssp.o \
+./src/main.o \
+./src/rtc.o \
+./src/spi_sd_lpc17xx.o \
+./src/timer.o \
+./src/uart.o \
+./src/xbee.o 
+
+C_DEPS += \
+./src/adc.d \
+./src/auxiliares.d \
+./src/cr_startup_lpc176x.d \
+./src/diskio.d \
+./src/ff.d \
+./src/lpc17xx_clkpwr.d \
+./src/lpc17xx_gpio.d \
+./src/lpc17xx_pinsel.d \
+./src/lpc17xx_ssp.d \
+./src/main.d \
+./src/rtc.d \
+./src/spi_sd_lpc17xx.d \
+./src/timer.d \
+./src/uart.d \
+./src/xbee.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+src/%.o: ../src/%.c
+	@echo 'Building file: $<'
+	@echo 'Invoking: MCU C Compiler'
+	arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC17xx -I"C:\nxp\LPCXpresso_5.2.4_2122\workspace\CMSISv2p00_LPC17xx\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+

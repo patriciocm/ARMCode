@@ -1,0 +1,2027 @@
+Archive member included because of file (symbol)
+
+C:\nxp\LPCXpresso_5.2.4_2122\workspace\CMSISv2p00_LPC17xx\Debug\libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+                              ./src/cr_startup_lpc176x.o (SystemInit)
+c:/nxp/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(__weak__main.o)
+                              ./src/cr_startup_lpc176x.o (__main)
+c:/nxp/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libcr_eabihelpers.a(division.o)
+                              ./src/lpc17xx_i2s.o (__aeabi_uldivmod)
+
+Allocating common symbols
+Common symbol       size              file
+
+Fatfs               0x234             ./src/ff_test_term.o
+File1               0x224             ./src/ff_test_term.o
+xfunc_in            0x4               ./src/monitor.o
+Finfo               0x20              ./src/ff_test_term.o
+acc_dirs            0x2               ./src/ff_test_term.o
+xfunc_out           0x4               ./src/monitor.o
+acc_files           0x2               ./src/ff_test_term.o
+Timer               0x4               ./src/ff_test_term.o
+Buff                0x1000            ./src/ff_test_term.o
+SysTickCnt          0x4               ./src/main.o
+File2               0x224             ./src/ff_test_term.o
+Lfname              0x100             ./src/ff_test_term.o
+Dir                 0x24              ./src/ff_test_term.o
+acc_size            0x4               ./src/ff_test_term.o
+Line                0x400             ./src/ff_test_term.o
+FULLCAN_ENABLE      0x1               ./src/lpc17xx_can.o
+
+Discarded input sections
+
+ .text          0x00000000        0x0 ./src/ccsbcs.o
+ .data          0x00000000        0x0 ./src/ccsbcs.o
+ .bss           0x00000000        0x0 ./src/ccsbcs.o
+ .text          0x00000000        0x0 ./src/comm.o
+ .data          0x00000000        0x0 ./src/comm.o
+ .bss           0x00000000        0x0 ./src/comm.o
+ .text          0x00000000        0x0 ./src/cr_startup_lpc176x.o
+ .data          0x00000000        0x0 ./src/cr_startup_lpc176x.o
+ .bss           0x00000000        0x0 ./src/cr_startup_lpc176x.o
+ .text          0x00000000        0x0 ./src/diskio.o
+ .data          0x00000000        0x0 ./src/diskio.o
+ .bss           0x00000000        0x0 ./src/diskio.o
+ .text          0x00000000        0x0 ./src/fattime.o
+ .data          0x00000000        0x0 ./src/fattime.o
+ .bss           0x00000000        0x0 ./src/fattime.o
+ .text          0x00000000        0x0 ./src/ff.o
+ .data          0x00000000        0x0 ./src/ff.o
+ .bss           0x00000000        0x0 ./src/ff.o
+ .text.f_stat   0x00000000       0x84 ./src/ff.o
+ .text.f_gets   0x00000000       0x88 ./src/ff.o
+ .text.f_putc   0x00000000       0x44 ./src/ff.o
+ .text.f_puts   0x00000000       0x50 ./src/ff.o
+ .text.f_printf
+                0x00000000      0x3dc ./src/ff.o
+ .text          0x00000000        0x0 ./src/ff_test_term.o
+ .data          0x00000000        0x0 ./src/ff_test_term.o
+ .bss           0x00000000        0x0 ./src/ff_test_term.o
+ .text          0x00000000        0x0 ./src/lpc17xx_adc.o
+ .data          0x00000000        0x0 ./src/lpc17xx_adc.o
+ .bss           0x00000000        0x0 ./src/lpc17xx_adc.o
+ .rodata        0x00000000       0x18 ./src/lpc17xx_adc.o
+ .text.ADC_Init
+                0x00000000       0x94 ./src/lpc17xx_adc.o
+ .text.ADC_DeInit
+                0x00000000       0x48 ./src/lpc17xx_adc.o
+ .text.ADC_GetData
+                0x00000000       0x38 ./src/lpc17xx_adc.o
+ .text.ADC_StartCmd
+                0x00000000       0x90 ./src/lpc17xx_adc.o
+ .text.ADC_BurstCmd
+                0x00000000       0x50 ./src/lpc17xx_adc.o
+ .text.ADC_PowerdownCmd
+                0x00000000       0x50 ./src/lpc17xx_adc.o
+ .text.ADC_EdgeStartConfig
+                0x00000000       0x6c ./src/lpc17xx_adc.o
+ .text.ADC_IntConfig
+                0x00000000       0xb4 ./src/lpc17xx_adc.o
+ .text.ADC_ChannelCmd
+                0x00000000       0x70 ./src/lpc17xx_adc.o
+ .text.ADC_ChannelGetData
+                0x00000000       0x58 ./src/lpc17xx_adc.o
+ .text.ADC_ChannelGetStatus
+                0x00000000       0x8c ./src/lpc17xx_adc.o
+ .text.ADC_GlobalGetData
+                0x00000000       0x48 ./src/lpc17xx_adc.o
+ .text.ADC_GlobalGetStatus
+                0x00000000       0x7c ./src/lpc17xx_adc.o
+ .text          0x00000000        0x0 ./src/lpc17xx_can.o
+ .data          0x00000000        0x0 ./src/lpc17xx_can.o
+ .bss           0x00000000        0x0 ./src/lpc17xx_can.o
+ .data.CAN1x    0x00000000        0x4 ./src/lpc17xx_can.o
+ .data.CAN2x    0x00000000        0x4 ./src/lpc17xx_can.o
+ .data.CANAFRAMx
+                0x00000000        0x4 ./src/lpc17xx_can.o
+ .data.CANAFx   0x00000000        0x4 ./src/lpc17xx_can.o
+ .rodata.CAN_BIT_TIME
+                0x00000000       0x44 ./src/lpc17xx_can.o
+ .bss.CANAF_FullCAN_cnt
+                0x00000000        0x2 ./src/lpc17xx_can.o
+ .bss.CANAF_std_cnt
+                0x00000000        0x2 ./src/lpc17xx_can.o
+ .bss.CANAF_gstd_cnt
+                0x00000000        0x2 ./src/lpc17xx_can.o
+ .bss.CANAF_ext_cnt
+                0x00000000        0x2 ./src/lpc17xx_can.o
+ .bss.CANAF_gext_cnt
+                0x00000000        0x2 ./src/lpc17xx_can.o
+ .bss._apfnCANCbs
+                0x00000000       0x30 ./src/lpc17xx_can.o
+ .rodata        0x00000000       0x18 ./src/lpc17xx_can.o
+ .text.CAN_SetBaudRate
+                0x00000000      0x134 ./src/lpc17xx_can.o
+ .text.CAN_Init
+                0x00000000      0x144 ./src/lpc17xx_can.o
+ .text.CAN_DeInit
+                0x00000000       0x64 ./src/lpc17xx_can.o
+ .text.CAN_SetupAFLUT
+                0x00000000      0xb2c ./src/lpc17xx_can.o
+ .text.CAN_LoadExplicitEntry
+                0x00000000      0x708 ./src/lpc17xx_can.o
+ .text.CAN_LoadFullCANEntry
+                0x00000000      0x694 ./src/lpc17xx_can.o
+ .text.CAN_LoadGroupEntry
+                0x00000000      0x630 ./src/lpc17xx_can.o
+ .text.CAN_RemoveEntry
+                0x00000000      0xa28 ./src/lpc17xx_can.o
+ .text.CAN_SendMsg
+                0x00000000      0x1d0 ./src/lpc17xx_can.o
+ .text.CAN_ReceiveMsg
+                0x00000000      0x120 ./src/lpc17xx_can.o
+ .text.FCAN_ReadObj
+                0x00000000      0x1e8 ./src/lpc17xx_can.o
+ .text.CAN_GetCTRLStatus
+                0x00000000       0x90 ./src/lpc17xx_can.o
+ .text.CAN_GetCRStatus
+                0x00000000       0x74 ./src/lpc17xx_can.o
+ .text.CAN_IRQCmd
+                0x00000000      0x154 ./src/lpc17xx_can.o
+ .text.CAN_SetupCBS
+                0x00000000       0x7c ./src/lpc17xx_can.o
+ .text.CAN_SetAFMode
+                0x00000000       0xa0 ./src/lpc17xx_can.o
+ .text.CAN_ModeConfig
+                0x00000000      0x1e0 ./src/lpc17xx_can.o
+ .text.CAN_IntHandler
+                0x00000000       0x68 ./src/lpc17xx_can.o
+ COMMON         0x00000000        0x1 ./src/lpc17xx_can.o
+ .text          0x00000000        0x0 ./src/lpc17xx_clkpwr.o
+ .data          0x00000000        0x0 ./src/lpc17xx_clkpwr.o
+ .bss           0x00000000        0x0 ./src/lpc17xx_clkpwr.o
+ .text.CLKPWR_Sleep
+                0x00000000       0x1c ./src/lpc17xx_clkpwr.o
+ .text.CLKPWR_DeepSleep
+                0x00000000       0x2c ./src/lpc17xx_clkpwr.o
+ .text.CLKPWR_PowerDown
+                0x00000000       0x2c ./src/lpc17xx_clkpwr.o
+ .text.CLKPWR_DeepPowerDown
+                0x00000000       0x2c ./src/lpc17xx_clkpwr.o
+ .text          0x00000000        0x0 ./src/lpc17xx_dac.o
+ .data          0x00000000        0x0 ./src/lpc17xx_dac.o
+ .bss           0x00000000        0x0 ./src/lpc17xx_dac.o
+ .rodata        0x00000000       0x18 ./src/lpc17xx_dac.o
+ .text.DAC_Init
+                0x00000000       0x40 ./src/lpc17xx_dac.o
+ .text.DAC_UpdateValue
+                0x00000000       0x54 ./src/lpc17xx_dac.o
+ .text.DAC_SetBias
+                0x00000000       0x4c ./src/lpc17xx_dac.o
+ .text.DAC_ConfigDAConverterControl
+                0x00000000       0x78 ./src/lpc17xx_dac.o
+ .text.DAC_SetDMATimeOut
+                0x00000000       0x3c ./src/lpc17xx_dac.o
+ .text          0x00000000        0x0 ./src/lpc17xx_emac.o
+ .data          0x00000000        0x0 ./src/lpc17xx_emac.o
+ .bss           0x00000000        0x0 ./src/lpc17xx_emac.o
+ .rodata.EMAC_clkdiv
+                0x00000000        0x8 ./src/lpc17xx_emac.o
+ .bss.Rx_Desc   0x00000000       0x20 ./src/lpc17xx_emac.o
+ .bss.Rx_Stat   0x00000000       0x20 ./src/lpc17xx_emac.o
+ .bss.Tx_Desc   0x00000000       0x18 ./src/lpc17xx_emac.o
+ .bss.Tx_Stat   0x00000000        0xc ./src/lpc17xx_emac.o
+ .bss.rx_buf    0x00000000     0x1800 ./src/lpc17xx_emac.o
+ .bss.tx_buf    0x00000000     0x1200 ./src/lpc17xx_emac.o
+ .bss._pfnIntCbDat
+                0x00000000       0x28 ./src/lpc17xx_emac.o
+ .text.rx_descr_init
+                0x00000000       0xcc ./src/lpc17xx_emac.o
+ .text.tx_descr_init
+                0x00000000       0xb0 ./src/lpc17xx_emac.o
+ .text.write_PHY
+                0x00000000       0x68 ./src/lpc17xx_emac.o
+ .text.read_PHY
+                0x00000000       0x74 ./src/lpc17xx_emac.o
+ .text.setEmacAddr
+                0x00000000       0x64 ./src/lpc17xx_emac.o
+ .text.EMAC_Init
+                0x00000000      0x1e8 ./src/lpc17xx_emac.o
+ .text.EMAC_DeInit
+                0x00000000       0x2c ./src/lpc17xx_emac.o
+ .text.EMAC_CheckPHYStatus
+                0x00000000       0x68 ./src/lpc17xx_emac.o
+ .text.EMAC_SetPHYMode
+                0x00000000      0x10c ./src/lpc17xx_emac.o
+ .text.EMAC_UpdatePHYStatus
+                0x00000000       0xb8 ./src/lpc17xx_emac.o
+ .text.EMAC_SetHashFilter
+                0x00000000       0xa4 ./src/lpc17xx_emac.o
+ .text.EMAC_CRCCalc
+                0x00000000      0x124 ./src/lpc17xx_emac.o
+ .text.EMAC_SetFilterMode
+                0x00000000       0x50 ./src/lpc17xx_emac.o
+ .text.EMAC_GetWoLStatus
+                0x00000000       0x3c ./src/lpc17xx_emac.o
+ .text.EMAC_WritePacketBuffer
+                0x00000000       0x88 ./src/lpc17xx_emac.o
+ .text.EMAC_ReadPacketBuffer
+                0x00000000       0x70 ./src/lpc17xx_emac.o
+ .text.EMAC_StandardIRQHandler
+                0x00000000       0xd8 ./src/lpc17xx_emac.o
+ .text.EMAC_SetupIntCBS
+                0x00000000       0x88 ./src/lpc17xx_emac.o
+ .text.EMAC_IntCmd
+                0x00000000       0x50 ./src/lpc17xx_emac.o
+ .text.EMAC_IntGetStatus
+                0x00000000       0x3c ./src/lpc17xx_emac.o
+ .text.EMAC_CheckReceiveIndex
+                0x00000000       0x2c ./src/lpc17xx_emac.o
+ .text.EMAC_CheckTransmitIndex
+                0x00000000       0x3c ./src/lpc17xx_emac.o
+ .text.EMAC_CheckReceiveDataStatus
+                0x00000000       0x3c ./src/lpc17xx_emac.o
+ .text.EMAC_GetReceiveDataSize
+                0x00000000       0x34 ./src/lpc17xx_emac.o
+ .text.EMAC_UpdateRxConsumeIndex
+                0x00000000       0x38 ./src/lpc17xx_emac.o
+ .text.EMAC_UpdateTxProduceIndex
+                0x00000000       0x38 ./src/lpc17xx_emac.o
+ .text          0x00000000        0x0 ./src/lpc17xx_gpdma.o
+ .data          0x00000000        0x0 ./src/lpc17xx_gpdma.o
+ .bss           0x00000000        0x0 ./src/lpc17xx_gpdma.o
+ .rodata.GPDMA_LUTPerAddr
+                0x00000000       0x60 ./src/lpc17xx_gpdma.o
+ .data.pGPDMACh
+                0x00000000       0x20 ./src/lpc17xx_gpdma.o
+ .rodata.GPDMA_LUTPerBurst
+                0x00000000       0x18 ./src/lpc17xx_gpdma.o
+ .rodata.GPDMA_LUTPerWid
+                0x00000000       0x18 ./src/lpc17xx_gpdma.o
+ .bss._apfnGPDMACbs
+                0x00000000       0x20 ./src/lpc17xx_gpdma.o
+ .text.GPDMA_Init
+                0x00000000       0xa0 ./src/lpc17xx_gpdma.o
+ .text.GPDMA_Setup
+                0x00000000      0x424 ./src/lpc17xx_gpdma.o
+ .text.GPDMA_ChannelCmd
+                0x00000000       0x48 ./src/lpc17xx_gpdma.o
+ .text.GPDMA_IntHandler
+                0x00000000       0xf8 ./src/lpc17xx_gpdma.o
+ .text          0x00000000        0x0 ./src/lpc17xx_gpio.o
+ .data          0x00000000        0x0 ./src/lpc17xx_gpio.o
+ .bss           0x00000000        0x0 ./src/lpc17xx_gpio.o
+ .text.FIO_HalfWordGetPointer
+                0x00000000       0x7c ./src/lpc17xx_gpio.o
+ .text.FIO_ByteGetPointer
+                0x00000000       0x7c ./src/lpc17xx_gpio.o
+ .text.GPIO_ReadValue
+                0x00000000       0x30 ./src/lpc17xx_gpio.o
+ .text.FIO_SetDir
+                0x00000000       0x28 ./src/lpc17xx_gpio.o
+ .text.FIO_ReadValue
+                0x00000000       0x20 ./src/lpc17xx_gpio.o
+ .text.FIO_SetMask
+                0x00000000       0x54 ./src/lpc17xx_gpio.o
+ .text.FIO_HalfWordSetDir
+                0x00000000       0x94 ./src/lpc17xx_gpio.o
+ .text.FIO_HalfWordSetMask
+                0x00000000       0x94 ./src/lpc17xx_gpio.o
+ .text.FIO_HalfWordSetValue
+                0x00000000       0x40 ./src/lpc17xx_gpio.o
+ .text.FIO_HalfWordClearValue
+                0x00000000       0x40 ./src/lpc17xx_gpio.o
+ .text.FIO_HalfWordReadValue
+                0x00000000       0x44 ./src/lpc17xx_gpio.o
+ .text.FIO_ByteSetDir
+                0x00000000       0x70 ./src/lpc17xx_gpio.o
+ .text.FIO_ByteSetMask
+                0x00000000       0x78 ./src/lpc17xx_gpio.o
+ .text.FIO_ByteSetValue
+                0x00000000       0x3c ./src/lpc17xx_gpio.o
+ .text.FIO_ByteClearValue
+                0x00000000       0x3c ./src/lpc17xx_gpio.o
+ .text.FIO_ByteReadValue
+                0x00000000       0x40 ./src/lpc17xx_gpio.o
+ .text          0x00000000        0x0 ./src/lpc17xx_i2c.o
+ .data          0x00000000        0x0 ./src/lpc17xx_i2c.o
+ .bss           0x00000000        0x0 ./src/lpc17xx_i2c.o
+ .text.NVIC_EnableIRQ
+                0x00000000       0x38 ./src/lpc17xx_i2c.o
+ .text.NVIC_DisableIRQ
+                0x00000000       0x3c ./src/lpc17xx_i2c.o
+ .bss.i2cdat    0x00000000       0x24 ./src/lpc17xx_i2c.o
+ .text.I2C_getNum
+                0x00000000       0x54 ./src/lpc17xx_i2c.o
+ .text.I2C_Start
+                0x00000000       0x44 ./src/lpc17xx_i2c.o
+ .text.I2C_Stop
+                0x00000000       0x38 ./src/lpc17xx_i2c.o
+ .text.I2C_SendByte
+                0x00000000       0x50 ./src/lpc17xx_i2c.o
+ .text.I2C_GetByte
+                0x00000000       0x5c ./src/lpc17xx_i2c.o
+ .text.I2C_IntCmd
+                0x00000000       0xa8 ./src/lpc17xx_i2c.o
+ .text.I2C_MasterHandler
+                0x00000000      0x408 ./src/lpc17xx_i2c.o
+ .text.I2C_SlaveHandler
+                0x00000000      0x1e4 ./src/lpc17xx_i2c.o
+ .rodata        0x00000000       0x18 ./src/lpc17xx_i2c.o
+ .text.I2C_SetClock
+                0x00000000       0xc8 ./src/lpc17xx_i2c.o
+ .text.I2C_DeInit
+                0x00000000       0xa4 ./src/lpc17xx_i2c.o
+ .text.I2C_Init
+                0x00000000       0xd8 ./src/lpc17xx_i2c.o
+ .text.I2C_Cmd  0x00000000       0x84 ./src/lpc17xx_i2c.o
+ .text.I2C_MasterTransferData
+                0x00000000      0x390 ./src/lpc17xx_i2c.o
+ .text.I2C_SlaveTransferData
+                0x00000000      0x2a4 ./src/lpc17xx_i2c.o
+ .text.I2C_SetOwnSlaveAddr
+                0x00000000      0x114 ./src/lpc17xx_i2c.o
+ .text.I2C_MonitorModeConfig
+                0x00000000       0x98 ./src/lpc17xx_i2c.o
+ .text.I2C_MonitorModeCmd
+                0x00000000       0x8c ./src/lpc17xx_i2c.o
+ .text.I2C_MonitorGetDatabuffer
+                0x00000000       0x54 ./src/lpc17xx_i2c.o
+ .text.I2C0_StdIntHandler
+                0x00000000       0x1c ./src/lpc17xx_i2c.o
+ .text.I2C1_StdIntHandler
+                0x00000000       0x1c ./src/lpc17xx_i2c.o
+ .text.I2C2_StdIntHandler
+                0x00000000       0x1c ./src/lpc17xx_i2c.o
+ .text          0x00000000        0x0 ./src/lpc17xx_i2s.o
+ .data          0x00000000        0x0 ./src/lpc17xx_i2s.o
+ .bss           0x00000000        0x0 ./src/lpc17xx_i2s.o
+ .bss._apfnI2SCbs
+                0x00000000        0x8 ./src/lpc17xx_i2s.o
+ .rodata        0x00000000       0x18 ./src/lpc17xx_i2s.o
+ .text.I2S_GetWordWidth
+                0x00000000       0x8c ./src/lpc17xx_i2s.o
+ .text.I2S_GetChannel
+                0x00000000       0x80 ./src/lpc17xx_i2s.o
+ .text.I2S_Init
+                0x00000000       0x54 ./src/lpc17xx_i2s.o
+ .text.I2S_Config
+                0x00000000      0x154 ./src/lpc17xx_i2s.o
+ .text.I2S_DeInit
+                0x00000000       0x3c ./src/lpc17xx_i2s.o
+ .text.I2S_GetLevel
+                0x00000000       0x6c ./src/lpc17xx_i2s.o
+ .text.I2S_Start
+                0x00000000       0x50 ./src/lpc17xx_i2s.o
+ .text.I2S_Send
+                0x00000000       0x38 ./src/lpc17xx_i2s.o
+ .text.I2S_Receive
+                0x00000000       0x34 ./src/lpc17xx_i2s.o
+ .text.I2S_Pause
+                0x00000000       0x70 ./src/lpc17xx_i2s.o
+ .text.I2S_Mute
+                0x00000000       0x70 ./src/lpc17xx_i2s.o
+ .text.I2S_Stop
+                0x00000000       0x94 ./src/lpc17xx_i2s.o
+ .text.I2S_FreqConfig
+                0x00000000      0x1ec ./src/lpc17xx_i2s.o
+ .text.I2S_SetBitRate
+                0x00000000       0x90 ./src/lpc17xx_i2s.o
+ .text.I2S_ModeConfig
+                0x00000000      0x148 ./src/lpc17xx_i2s.o
+ .text.I2S_DMAConfig
+                0x00000000       0xd4 ./src/lpc17xx_i2s.o
+ .text.I2S_DMACmd
+                0x00000000      0x120 ./src/lpc17xx_i2s.o
+ .text.I2S_IRQConfig
+                0x00000000       0x90 ./src/lpc17xx_i2s.o
+ .text.I2S_IRQCmd
+                0x00000000       0x9c ./src/lpc17xx_i2s.o
+ .text.I2S_IntHandler
+                0x00000000       0xa4 ./src/lpc17xx_i2s.o
+ .text          0x00000000        0x0 ./src/lpc17xx_mcpwm.o
+ .data          0x00000000        0x0 ./src/lpc17xx_mcpwm.o
+ .bss           0x00000000        0x0 ./src/lpc17xx_mcpwm.o
+ .text.MCPWM_Init
+                0x00000000       0x34 ./src/lpc17xx_mcpwm.o
+ .text.MCPWM_ConfigChannel
+                0x00000000      0x228 ./src/lpc17xx_mcpwm.o
+ .text.MCPWM_WriteToShadow
+                0x00000000       0x5c ./src/lpc17xx_mcpwm.o
+ .text.MCPWM_ConfigCapture
+                0x00000000      0x1a0 ./src/lpc17xx_mcpwm.o
+ .text.MCPWM_ClearCapture
+                0x00000000       0x30 ./src/lpc17xx_mcpwm.o
+ .text.MCPWM_GetCapture
+                0x00000000       0x40 ./src/lpc17xx_mcpwm.o
+ .text.MCPWM_CountConfig
+                0x00000000      0x154 ./src/lpc17xx_mcpwm.o
+ .text.MCPWM_Start
+                0x00000000       0x5c ./src/lpc17xx_mcpwm.o
+ .text.MCPWM_Stop
+                0x00000000       0x5c ./src/lpc17xx_mcpwm.o
+ .text.MCPWM_ACMode
+                0x00000000       0x2c ./src/lpc17xx_mcpwm.o
+ .text.MCPWM_DCMode
+                0x00000000       0x50 ./src/lpc17xx_mcpwm.o
+ .text.MCPWM_IntConfig
+                0x00000000       0x2c ./src/lpc17xx_mcpwm.o
+ .text.MCPWM_IntSet
+                0x00000000       0x1c ./src/lpc17xx_mcpwm.o
+ .text.MCPWM_IntClear
+                0x00000000       0x1c ./src/lpc17xx_mcpwm.o
+ .text.MCPWM_GetIntStatus
+                0x00000000       0x2c ./src/lpc17xx_mcpwm.o
+ .text          0x00000000        0x0 ./src/lpc17xx_nvic.o
+ .data          0x00000000        0x0 ./src/lpc17xx_nvic.o
+ .bss           0x00000000        0x0 ./src/lpc17xx_nvic.o
+ .text          0x00000000        0x0 ./src/lpc17xx_pinsel.o
+ .data          0x00000000        0x0 ./src/lpc17xx_pinsel.o
+ .bss           0x00000000        0x0 ./src/lpc17xx_pinsel.o
+ .text.PINSEL_ConfigTraceFunc
+                0x00000000       0x54 ./src/lpc17xx_pinsel.o
+ .text.PINSEL_SetI2C0Pins
+                0x00000000       0x3c ./src/lpc17xx_pinsel.o
+ .text          0x00000000        0x0 ./src/lpc17xx_pwm.o
+ .data          0x00000000        0x0 ./src/lpc17xx_pwm.o
+ .bss           0x00000000        0x0 ./src/lpc17xx_pwm.o
+ .rodata        0x00000000       0x18 ./src/lpc17xx_pwm.o
+ .text.PWM_GetIntStatus
+                0x00000000       0x94 ./src/lpc17xx_pwm.o
+ .text.PWM_ClearIntPending
+                0x00000000       0x84 ./src/lpc17xx_pwm.o
+ .text.PWM_ConfigStructInit
+                0x00000000       0x68 ./src/lpc17xx_pwm.o
+ .text.PWM_Init
+                0x00000000      0x1c0 ./src/lpc17xx_pwm.o
+ .text.PWM_DeInit
+                0x00000000       0x50 ./src/lpc17xx_pwm.o
+ .text.PWM_Cmd  0x00000000       0x70 ./src/lpc17xx_pwm.o
+ .text.PWM_CounterCmd
+                0x00000000       0x70 ./src/lpc17xx_pwm.o
+ .text.PWM_ResetCounter
+                0x00000000       0x48 ./src/lpc17xx_pwm.o
+ .text.PWM_ConfigMatch
+                0x00000000      0x1f8 ./src/lpc17xx_pwm.o
+ .text.PWM_ConfigCapture
+                0x00000000      0x1f4 ./src/lpc17xx_pwm.o
+ .text.PWM_GetCaptureValue
+                0x00000000       0x6c ./src/lpc17xx_pwm.o
+ .text.PWM_MatchUpdate
+                0x00000000      0x108 ./src/lpc17xx_pwm.o
+ .text.PWM_ChannelConfig
+                0x00000000       0xcc ./src/lpc17xx_pwm.o
+ .text.PWM_ChannelCmd
+                0x00000000       0xb8 ./src/lpc17xx_pwm.o
+ .text          0x00000000        0x0 ./src/lpc17xx_qei.o
+ .data          0x00000000        0x0 ./src/lpc17xx_qei.o
+ .bss           0x00000000        0x0 ./src/lpc17xx_qei.o
+ .rodata        0x00000000       0x18 ./src/lpc17xx_qei.o
+ .text.QEI_Reset
+                0x00000000       0x60 ./src/lpc17xx_qei.o
+ .text.QEI_Init
+                0x00000000      0x15c ./src/lpc17xx_qei.o
+ .text.QEI_DeInit
+                0x00000000       0x3c ./src/lpc17xx_qei.o
+ .text.QEI_ConfigStructInit
+                0x00000000       0x3c ./src/lpc17xx_qei.o
+ .text.QEI_GetStatus
+                0x00000000       0x5c ./src/lpc17xx_qei.o
+ .text.QEI_GetPosition
+                0x00000000       0x34 ./src/lpc17xx_qei.o
+ .text.QEI_SetMaxPosition
+                0x00000000       0x38 ./src/lpc17xx_qei.o
+ .text.QEI_SetPositionComp
+                0x00000000       0x6c ./src/lpc17xx_qei.o
+ .text.QEI_GetIndex
+                0x00000000       0x34 ./src/lpc17xx_qei.o
+ .text.QEI_SetIndexComp
+                0x00000000       0x38 ./src/lpc17xx_qei.o
+ .text.QEI_SetTimerReload
+                0x00000000       0xb8 ./src/lpc17xx_qei.o
+ .text.QEI_GetTimer
+                0x00000000       0x34 ./src/lpc17xx_qei.o
+ .text.QEI_GetVelocity
+                0x00000000       0x34 ./src/lpc17xx_qei.o
+ .text.QEI_GetVelocityCap
+                0x00000000       0x34 ./src/lpc17xx_qei.o
+ .text.QEI_SetVelocityComp
+                0x00000000       0x38 ./src/lpc17xx_qei.o
+ .text.QEI_SetDigiFilter
+                0x00000000       0x38 ./src/lpc17xx_qei.o
+ .text.QEI_GetIntStatus
+                0x00000000       0xb0 ./src/lpc17xx_qei.o
+ .text.QEI_IntCmd
+                0x00000000       0xd0 ./src/lpc17xx_qei.o
+ .text.QEI_IntSet
+                0x00000000       0xa0 ./src/lpc17xx_qei.o
+ .text.QEI_IntClear
+                0x00000000       0xa0 ./src/lpc17xx_qei.o
+ .text.QEI_CalculateRPM
+                0x00000000       0xe4 ./src/lpc17xx_qei.o
+ .text          0x00000000        0x0 ./src/lpc17xx_rit.o
+ .data          0x00000000        0x0 ./src/lpc17xx_rit.o
+ .bss           0x00000000        0x0 ./src/lpc17xx_rit.o
+ .rodata        0x00000000       0x18 ./src/lpc17xx_rit.o
+ .text.RIT_Init
+                0x00000000       0x5c ./src/lpc17xx_rit.o
+ .text.RIT_DeInit
+                0x00000000       0x5c ./src/lpc17xx_rit.o
+ .text.RIT_TimerConfig
+                0x00000000       0x48 ./src/lpc17xx_rit.o
+ .text.RIT_Cmd  0x00000000       0x78 ./src/lpc17xx_rit.o
+ .text.RIT_TimerClearCmd
+                0x00000000       0x78 ./src/lpc17xx_rit.o
+ .text.RIT_TimerEnableOnBreakCmd
+                0x00000000       0x78 ./src/lpc17xx_rit.o
+ .text.RIT_GetIntStatus
+                0x00000000       0x60 ./src/lpc17xx_rit.o
+ .text          0x00000000        0x0 ./src/lpc17xx_rtc.o
+ .data          0x00000000        0x0 ./src/lpc17xx_rtc.o
+ .bss           0x00000000        0x0 ./src/lpc17xx_rtc.o
+ .text.RTC_DeInit
+                0x00000000       0x44 ./src/lpc17xx_rtc.o
+ .text.RTC_ResetClockTickCounter
+                0x00000000       0x50 ./src/lpc17xx_rtc.o
+ .text.RTC_CntIncrIntConfig
+                0x00000000      0x218 ./src/lpc17xx_rtc.o
+ .text.RTC_AlarmIntConfig
+                0x00000000      0x218 ./src/lpc17xx_rtc.o
+ .text.RTC_SetTime
+                0x00000000      0x200 ./src/lpc17xx_rtc.o
+ .text.RTC_GetTime
+                0x00000000      0x118 ./src/lpc17xx_rtc.o
+ .text.RTC_GetFullTime
+                0x00000000       0xb4 ./src/lpc17xx_rtc.o
+ .text.RTC_SetAlarmTime
+                0x00000000      0x1c4 ./src/lpc17xx_rtc.o
+ .text.RTC_GetAlarmTime
+                0x00000000       0xc0 ./src/lpc17xx_rtc.o
+ .text.RTC_SetFullAlarmTime
+                0x00000000       0xc8 ./src/lpc17xx_rtc.o
+ .text.RTC_GetFullAlarmTime
+                0x00000000       0xb8 ./src/lpc17xx_rtc.o
+ .text.RTC_GetIntPending
+                0x00000000       0x64 ./src/lpc17xx_rtc.o
+ .text.RTC_ClearIntPending
+                0x00000000       0x54 ./src/lpc17xx_rtc.o
+ .text.RTC_WriteGPREG
+                0x00000000       0x64 ./src/lpc17xx_rtc.o
+ .text.RTC_ReadGPREG
+                0x00000000       0x68 ./src/lpc17xx_rtc.o
+ .text          0x00000000        0x0 ./src/lpc17xx_spi.o
+ .data          0x00000000        0x0 ./src/lpc17xx_spi.o
+ .bss           0x00000000        0x0 ./src/lpc17xx_spi.o
+ .bss.spidat    0x00000000        0xc ./src/lpc17xx_spi.o
+ .text.SPI_IntHandler
+                0x00000000      0x1bc ./src/lpc17xx_spi.o
+ .rodata        0x00000000       0x18 ./src/lpc17xx_spi.o
+ .text.SPI_SetClock
+                0x00000000       0x84 ./src/lpc17xx_spi.o
+ .text.SPI_DeInit
+                0x00000000       0x48 ./src/lpc17xx_spi.o
+ .text.SPI_Init
+                0x00000000       0xc8 ./src/lpc17xx_spi.o
+ .text.SPI_ConfigStructInit
+                0x00000000       0x48 ./src/lpc17xx_spi.o
+ .text.SPI_SendData
+                0x00000000       0x38 ./src/lpc17xx_spi.o
+ .text.SPI_ReceiveData
+                0x00000000       0x38 ./src/lpc17xx_spi.o
+ .text.SPI_ReadWrite
+                0x00000000      0x234 ./src/lpc17xx_spi.o
+ .text.SPI_IntCmd
+                0x00000000       0x74 ./src/lpc17xx_spi.o
+ .text.SPI_GetIntStatus
+                0x00000000       0x3c ./src/lpc17xx_spi.o
+ .text.SPI_ClearIntPending
+                0x00000000       0x38 ./src/lpc17xx_spi.o
+ .text.SPI_GetStatus
+                0x00000000       0x38 ./src/lpc17xx_spi.o
+ .text.SPI_CheckStatus
+                0x00000000       0x54 ./src/lpc17xx_spi.o
+ .text.SPI_StdIntHandler
+                0x00000000       0x14 ./src/lpc17xx_spi.o
+ .text          0x00000000        0x0 ./src/lpc17xx_ssp.o
+ .data          0x00000000        0x0 ./src/lpc17xx_ssp.o
+ .bss           0x00000000        0x0 ./src/lpc17xx_ssp.o
+ .text.SSP_IntHandler
+                0x00000000      0x338 ./src/lpc17xx_ssp.o
+ .text.SSP_LoopBackCmd
+                0x00000000       0x7c ./src/lpc17xx_ssp.o
+ .text.SSP_SlaveOutputCmd
+                0x00000000       0x7c ./src/lpc17xx_ssp.o
+ .text.SSP_SendData
+                0x00000000       0x48 ./src/lpc17xx_ssp.o
+ .text.SSP_ReceiveData
+                0x00000000       0x44 ./src/lpc17xx_ssp.o
+ .text.SSP_ReadWrite
+                0x00000000      0x458 ./src/lpc17xx_ssp.o
+ .text.SSP_GetStatus
+                0x00000000       0x84 ./src/lpc17xx_ssp.o
+ .text.SSP_IntConfig
+                0x00000000       0x98 ./src/lpc17xx_ssp.o
+ .text.SSP_GetRawIntStatus
+                0x00000000       0x7c ./src/lpc17xx_ssp.o
+ .text.SSP_GetIntStatus
+                0x00000000       0x7c ./src/lpc17xx_ssp.o
+ .text.SSP_ClearIntPending
+                0x00000000       0x60 ./src/lpc17xx_ssp.o
+ .text.SSP_DMACmd
+                0x00000000       0xa8 ./src/lpc17xx_ssp.o
+ .text.SSP0_StdIntHandler
+                0x00000000       0x1c ./src/lpc17xx_ssp.o
+ .text.SSP1_StdIntHandler
+                0x00000000       0x1c ./src/lpc17xx_ssp.o
+ .text          0x00000000        0x0 ./src/lpc17xx_timer.o
+ .data          0x00000000        0x0 ./src/lpc17xx_timer.o
+ .bss           0x00000000        0x0 ./src/lpc17xx_timer.o
+ .text.TIM_GetPClock
+                0x00000000       0x68 ./src/lpc17xx_timer.o
+ .text.TIM_ConverUSecToVal
+                0x00000000       0x64 ./src/lpc17xx_timer.o
+ .text.TIM_ConverPtrToTimeNum
+                0x00000000       0x6c ./src/lpc17xx_timer.o
+ .rodata        0x00000000       0x18 ./src/lpc17xx_timer.o
+ .text.TIM_GetIntStatus
+                0x00000000       0xb4 ./src/lpc17xx_timer.o
+ .text.TIM_GetIntCaptureStatus
+                0x00000000       0xb8 ./src/lpc17xx_timer.o
+ .text.TIM_ClearIntPending
+                0x00000000       0xa0 ./src/lpc17xx_timer.o
+ .text.TIM_ClearIntCapturePending
+                0x00000000       0xa4 ./src/lpc17xx_timer.o
+ .text.TIM_ConfigStructInit
+                0x00000000       0x40 ./src/lpc17xx_timer.o
+ .text.TIM_Init
+                0x00000000      0x1bc ./src/lpc17xx_timer.o
+ .text.TIM_DeInit
+                0x00000000       0xc4 ./src/lpc17xx_timer.o
+ .text.TIM_Cmd  0x00000000       0x78 ./src/lpc17xx_timer.o
+ .text.TIM_ResetCounter
+                0x00000000       0x6c ./src/lpc17xx_timer.o
+ .text.TIM_ConfigMatch
+                0x00000000      0x19c ./src/lpc17xx_timer.o
+ .text.TIM_ConfigCapture
+                0x00000000      0x108 ./src/lpc17xx_timer.o
+ .text.TIM_GetCaptureValue
+                0x00000000       0x84 ./src/lpc17xx_timer.o
+ .text          0x00000000        0x0 ./src/lpc17xx_uart.o
+ .data          0x00000000        0x0 ./src/lpc17xx_uart.o
+ .bss           0x00000000        0x0 ./src/lpc17xx_uart.o
+ .text.UART_DeInit
+                0x00000000       0xcc ./src/lpc17xx_uart.o
+ .text.UART_ForceBreak
+                0x00000000       0x88 ./src/lpc17xx_uart.o
+ .text.UART_IrDAInvtInputCmd
+                0x00000000       0x84 ./src/lpc17xx_uart.o
+ .text.UART_IrDACmd
+                0x00000000       0x80 ./src/lpc17xx_uart.o
+ .text.UART_IrDAPulseDivConfig
+                0x00000000       0xa8 ./src/lpc17xx_uart.o
+ .text.UART_GetLineStatus
+                0x00000000       0x7c ./src/lpc17xx_uart.o
+ .text.UART_ABCmd
+                0x00000000      0x15c ./src/lpc17xx_uart.o
+ .text.UART_FullModemForcePinState
+                0x00000000       0xcc ./src/lpc17xx_uart.o
+ .text.UART_FullModemConfigMode
+                0x00000000       0xdc ./src/lpc17xx_uart.o
+ .text.UART_FullModemGetStatus
+                0x00000000       0x38 ./src/lpc17xx_uart.o
+ .text.UART_RS485Config
+                0x00000000      0x1bc ./src/lpc17xx_uart.o
+ .text.UART_RS485ReceiverCmd
+                0x00000000       0x48 ./src/lpc17xx_uart.o
+ .text.UART_RS485Send
+                0x00000000       0x84 ./src/lpc17xx_uart.o
+ .text.UART_RS485SendSlvAddr
+                0x00000000       0x28 ./src/lpc17xx_uart.o
+ .text.UART_RS485SendData
+                0x00000000       0x28 ./src/lpc17xx_uart.o
+ .text.UART1_StdIntHandler
+                0x00000000       0x14 ./src/lpc17xx_uart.o
+ .text.UART2_StdIntHandler
+                0x00000000       0x14 ./src/lpc17xx_uart.o
+ .text.UART3_StdIntHandler
+                0x00000000       0x14 ./src/lpc17xx_uart.o
+ .text          0x00000000        0x0 ./src/lpc17xx_wdt.o
+ .data          0x00000000        0x0 ./src/lpc17xx_wdt.o
+ .bss           0x00000000        0x0 ./src/lpc17xx_wdt.o
+ .text.WDT_SetTimeOut
+                0x00000000      0x1a0 ./src/lpc17xx_wdt.o
+ .rodata        0x00000000       0x18 ./src/lpc17xx_wdt.o
+ .text.WDT_Init
+                0x00000000       0x98 ./src/lpc17xx_wdt.o
+ .text.WDT_Start
+                0x00000000       0x44 ./src/lpc17xx_wdt.o
+ .text.WDT_ReadTimeOutFlag
+                0x00000000       0x20 ./src/lpc17xx_wdt.o
+ .text.WDT_ClrTimeOutFlag
+                0x00000000       0x20 ./src/lpc17xx_wdt.o
+ .text.WDT_UpdateTimeOut
+                0x00000000       0x30 ./src/lpc17xx_wdt.o
+ .text.WDT_Feed
+                0x00000000       0x24 ./src/lpc17xx_wdt.o
+ .text.WDT_GetCurrentCount
+                0x00000000       0x14 ./src/lpc17xx_wdt.o
+ .text          0x00000000        0x0 ./src/main.o
+ .data          0x00000000        0x0 ./src/main.o
+ .bss           0x00000000        0x0 ./src/main.o
+ .text          0x00000000        0x0 ./src/monitor.o
+ .data          0x00000000        0x0 ./src/monitor.o
+ .bss           0x00000000        0x0 ./src/monitor.o
+ .text          0x00000000        0x0 ./src/rtc_cal.o
+ .data          0x00000000        0x0 ./src/rtc_cal.o
+ .bss           0x00000000        0x0 ./src/rtc_cal.o
+ .text          0x00000000        0x0 ./src/spi_sd_lpc17xx.o
+ .data          0x00000000        0x0 ./src/spi_sd_lpc17xx.o
+ .bss           0x00000000        0x0 ./src/spi_sd_lpc17xx.o
+ .text          0x00000000        0xa ./src/startup_LPC17xx.o
+ .data          0x00000000        0x0 ./src/startup_LPC17xx.o
+ .bss           0x00000000        0x0 ./src/startup_LPC17xx.o
+ .cs3.interrupt_vector
+                0x00000000       0xc4 ./src/startup_LPC17xx.o
+ .cs3.reset     0x00000000       0x60 ./src/startup_LPC17xx.o
+ .ARM.extab.cs3.reset
+                0x00000000        0x0 ./src/startup_LPC17xx.o
+ .ARM.exidx.cs3.reset
+                0x00000000        0x8 ./src/startup_LPC17xx.o
+ .text          0x00000000        0x0 ./src/syscall.o
+ .data          0x00000000        0x0 ./src/syscall.o
+ .bss           0x00000000        0x0 ./src/syscall.o
+ .text          0x00000000        0x0 C:\nxp\LPCXpresso_5.2.4_2122\workspace\CMSISv2p00_LPC17xx\Debug\libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .data          0x00000000        0x0 C:\nxp\LPCXpresso_5.2.4_2122\workspace\CMSISv2p00_LPC17xx\Debug\libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .bss           0x00000000        0x0 C:\nxp\LPCXpresso_5.2.4_2122\workspace\CMSISv2p00_LPC17xx\Debug\libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .text.SystemCoreClockUpdate
+                0x00000000       0xcc C:\nxp\LPCXpresso_5.2.4_2122\workspace\CMSISv2p00_LPC17xx\Debug\libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .text          0x00000000        0x0 c:/nxp/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(__weak__main.o)
+ .data          0x00000000        0x0 c:/nxp/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(__weak__main.o)
+ .bss           0x00000000        0x0 c:/nxp/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(__weak__main.o)
+ .text          0x00000000        0x0 c:/nxp/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libcr_eabihelpers.a(division.o)
+ .data          0x00000000        0x0 c:/nxp/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libcr_eabihelpers.a(division.o)
+ .bss           0x00000000        0x0 c:/nxp/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libcr_eabihelpers.a(division.o)
+ .text.__aeabi_division_idiv
+                0x00000000       0x10 c:/nxp/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libcr_eabihelpers.a(division.o)
+ .text.__aeabi_division_idivmod
+                0x00000000       0x16 c:/nxp/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libcr_eabihelpers.a(division.o)
+ .text.__aeabi_division_uidiv
+                0x00000000       0x10 c:/nxp/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libcr_eabihelpers.a(division.o)
+ .text.__aeabi_division_uidivmod
+                0x00000000       0x16 c:/nxp/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libcr_eabihelpers.a(division.o)
+ .text.__aeabi_division_ldivmod
+                0x00000000       0x26 c:/nxp/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libcr_eabihelpers.a(division.o)
+ .text.__aeabi_division_uldivmod
+                0x00000000      0x174 c:/nxp/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libcr_eabihelpers.a(division.o)
+ .text.__aeabi_division_idiv0
+                0x00000000        0x2 c:/nxp/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libcr_eabihelpers.a(division.o)
+ .text.__aeabi_division_ldiv0
+                0x00000000        0x2 c:/nxp/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libcr_eabihelpers.a(division.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+MFlash512        0x00000000         0x00080000         xr
+RamLoc32         0x10000000         0x00008000         xrw
+RamAHB32         0x2007c000         0x00008000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD ./src/ccsbcs.o
+LOAD ./src/comm.o
+LOAD ./src/cr_startup_lpc176x.o
+LOAD ./src/diskio.o
+LOAD ./src/fattime.o
+LOAD ./src/ff.o
+LOAD ./src/ff_test_term.o
+LOAD ./src/lpc17xx_adc.o
+LOAD ./src/lpc17xx_can.o
+LOAD ./src/lpc17xx_clkpwr.o
+LOAD ./src/lpc17xx_dac.o
+LOAD ./src/lpc17xx_emac.o
+LOAD ./src/lpc17xx_gpdma.o
+LOAD ./src/lpc17xx_gpio.o
+LOAD ./src/lpc17xx_i2c.o
+LOAD ./src/lpc17xx_i2s.o
+LOAD ./src/lpc17xx_mcpwm.o
+LOAD ./src/lpc17xx_nvic.o
+LOAD ./src/lpc17xx_pinsel.o
+LOAD ./src/lpc17xx_pwm.o
+LOAD ./src/lpc17xx_qei.o
+LOAD ./src/lpc17xx_rit.o
+LOAD ./src/lpc17xx_rtc.o
+LOAD ./src/lpc17xx_spi.o
+LOAD ./src/lpc17xx_ssp.o
+LOAD ./src/lpc17xx_timer.o
+LOAD ./src/lpc17xx_uart.o
+LOAD ./src/lpc17xx_wdt.o
+LOAD ./src/main.o
+LOAD ./src/monitor.o
+LOAD ./src/rtc_cal.o
+LOAD ./src/spi_sd_lpc17xx.o
+LOAD ./src/startup_LPC17xx.o
+LOAD ./src/syscall.o
+LOAD C:\nxp\LPCXpresso_5.2.4_2122\workspace\CMSISv2p00_LPC17xx\Debug\libCMSISv2p00_LPC17xx.a
+START GROUP
+LOAD c:/nxp/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a
+LOAD c:/nxp/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libcr_eabihelpers.a
+END GROUP
+                0x00080000                __top_MFlash512 = 0x80000
+                0x10008000                __top_RamLoc32 = 0x10008000
+                0x20084000                __top_RamAHB32 = 0x20084000
+
+.text           0x00000000     0xbf1c
+ FILL mask 0xff
+                0x00000000                __vectors_start__ = ABSOLUTE (.)
+ *(.isr_vector)
+ .isr_vector    0x00000000       0xcc ./src/cr_startup_lpc176x.o
+                0x00000000                g_pfnVectors
+                0x000000cc                . = ALIGN (0x4)
+                0x000000cc                __section_table_start = .
+                0x000000cc                __data_section_table = .
+                0x000000cc        0x4 LONG 0xbf1c LOADADDR (.data)
+                0x000000d0        0x4 LONG 0x10000000 ADDR (.data)
+                0x000000d4        0x4 LONG 0x8 SIZEOF (.data)
+                0x000000d8        0x4 LONG 0xbf1c LOADADDR (.data_RAM2)
+                0x000000dc        0x4 LONG 0x2007c000 ADDR (.data_RAM2)
+                0x000000e0        0x4 LONG 0x0 SIZEOF (.data_RAM2)
+                0x000000e4                __data_section_table_end = .
+                0x000000e4                __bss_section_table = .
+                0x000000e4        0x4 LONG 0x10000008 ADDR (.bss)
+                0x000000e8        0x4 LONG 0x206c SIZEOF (.bss)
+                0x000000ec        0x4 LONG 0x2007c000 ADDR (.bss_RAM2)
+                0x000000f0        0x4 LONG 0x0 SIZEOF (.bss_RAM2)
+                0x000000f4                __bss_section_table_end = .
+                0x000000f4                __section_table_end = .
+ *(.after_vectors*)
+ .after_vectors
+                0x000000f4       0x78 ./src/cr_startup_lpc176x.o
+                0x000000f4                NMI_Handler
+                0x000000f6                HardFault_Handler
+                0x000000f8                MemManage_Handler
+                0x000000fa                BusFault_Handler
+                0x000000fc                UsageFault_Handler
+                0x000000fe                SVC_Handler
+                0x00000100                DebugMon_Handler
+                0x00000102                PendSV_Handler
+                0x00000106                data_init
+                0x00000118                bss_init
+                0x00000128                ResetISR
+                0x00000168                UART1_IRQHandler
+                0x00000168                EINT3_IRQHandler
+                0x00000168                CANActivity_IRQHandler
+                0x00000168                TIMER3_IRQHandler
+                0x00000168                EINT2_IRQHandler
+                0x00000168                I2C1_IRQHandler
+                0x00000168                IntDefaultHandler
+                0x00000168                PLL0_IRQHandler
+                0x00000168                CAN_IRQHandler
+                0x00000168                PWM1_IRQHandler
+                0x00000168                SSP0_IRQHandler
+                0x00000168                I2S_IRQHandler
+                0x00000168                I2C2_IRQHandler
+                0x00000168                RTC_IRQHandler
+                0x00000168                TIMER0_IRQHandler
+                0x00000168                SPI_IRQHandler
+                0x00000168                USBActivity_IRQHandler
+                0x00000168                EINT1_IRQHandler
+                0x00000168                TIMER1_IRQHandler
+                0x00000168                UART2_IRQHandler
+                0x00000168                ADC_IRQHandler
+                0x00000168                SSP1_IRQHandler
+                0x00000168                USB_IRQHandler
+                0x00000168                BOD_IRQHandler
+                0x00000168                I2C0_IRQHandler
+                0x00000168                WDT_IRQHandler
+                0x00000168                RIT_IRQHandler
+                0x00000168                QEI_IRQHandler
+                0x00000168                EINT0_IRQHandler
+                0x00000168                PLL1_IRQHandler
+                0x00000168                DMA_IRQHandler
+                0x00000168                TIMER2_IRQHandler
+                0x00000168                UART3_IRQHandler
+                0x00000168                MCPWM_IRQHandler
+                0x00000168                ENET_IRQHandler
+                0x000002fc                . = 0x2fc
+ *fill*         0x0000016c      0x190 ff
+                0x000002fc                PROVIDE (__CRP_WORD_START__, .)
+ *(.crp)
+ .crp           0x000002fc        0x4 ./src/main.o
+                0x000002fc                CRP_WORD
+                0x00000300                PROVIDE (__CRP_WORD_END__, .)
+                0x00000001                ASSERT (! ((__CRP_WORD_START__ == __CRP_WORD_END__)), Linker CRP Enabled, but no CRP_WORD provided within application)
+ *(.text*)
+ .text.ff_convert
+                0x00000300       0x88 ./src/ccsbcs.o
+                0x00000300                ff_convert
+ .text.ff_wtoupper
+                0x00000388       0x70 ./src/ccsbcs.o
+                0x00000388                ff_wtoupper
+ .text.NVIC_EnableIRQ
+                0x000003f8       0x38 ./src/comm.o
+ .text.NVIC_SetPriority
+                0x00000430       0x5c ./src/comm.o
+ .text.UART0_IRQHandler
+                0x0000048c        0xc ./src/comm.o
+                0x0000048c                UART0_IRQHandler
+ .text.UART_IntReceive
+                0x00000498       0x94 ./src/comm.o
+ .text.UART_IntTransmit
+                0x0000052c      0x100 ./src/comm.o
+ .text.UART_IntErr
+                0x0000062c       0x10 ./src/comm.o
+ .text.UARTSend
+                0x0000063c       0xd0 ./src/comm.o
+ .text.UARTReceive
+                0x0000070c       0xb8 ./src/comm.o
+ .text.uart_init_intern
+                0x000007c4      0x164 ./src/comm.o
+ .text.comm_test
+                0x00000928       0x30 ./src/comm.o
+                0x00000928                comm_test
+ .text.comm_get
+                0x00000958       0x3c ./src/comm.o
+                0x00000958                comm_get
+ .text.comm_put
+                0x00000994       0x34 ./src/comm.o
+                0x00000994                comm_put
+ .text.comm_puts
+                0x000009c8       0x38 ./src/comm.o
+                0x000009c8                comm_puts
+ .text.comm_init
+                0x00000a00        0xc ./src/comm.o
+                0x00000a00                comm_init
+ .text.comm_txbusy
+                0x00000a0c       0x20 ./src/comm.o
+                0x00000a0c                comm_txbusy
+ .text.xcomm_put
+                0x00000a2c       0x1c ./src/comm.o
+                0x00000a2c                xcomm_put
+ .text.xcomm_get
+                0x00000a48       0x10 ./src/comm.o
+                0x00000a48                xcomm_get
+ .text.disk_timerproc
+                0x00000a58        0xc ./src/diskio.o
+                0x00000a58                disk_timerproc
+ .text.disk_initialize
+                0x00000a64       0x48 ./src/diskio.o
+                0x00000a64                disk_initialize
+ .text.disk_status
+                0x00000aac       0x48 ./src/diskio.o
+                0x00000aac                disk_status
+ .text.disk_read
+                0x00000af4       0x58 ./src/diskio.o
+                0x00000af4                disk_read
+ .text.disk_write
+                0x00000b4c       0x58 ./src/diskio.o
+                0x00000b4c                disk_write
+ .text.disk_ioctl
+                0x00000ba4       0x54 ./src/diskio.o
+                0x00000ba4                disk_ioctl
+ .text.get_fattime
+                0x00000bf8       0x54 ./src/fattime.o
+                0x00000bf8                get_fattime
+ .text.mem_cpy  0x00000c4c       0x50 ./src/ff.o
+ .text.mem_set  0x00000c9c       0x44 ./src/ff.o
+ .text.mem_cmp  0x00000ce0       0x70 ./src/ff.o
+ .text.chk_chr  0x00000d50       0x38 ./src/ff.o
+ .text.move_window
+                0x00000d88       0xd4 ./src/ff.o
+ .text.sync     0x00000e5c      0x180 ./src/ff.o
+ .text.get_fat  0x00000fdc      0x1a0 ./src/ff.o
+                0x00000fdc                get_fat
+ .text.put_fat  0x0000117c      0x25c ./src/ff.o
+                0x0000117c                put_fat
+ .text.remove_chain
+                0x000013d8       0xb0 ./src/ff.o
+ .text.create_chain
+                0x00001488      0x120 ./src/ff.o
+ .text.clust2sect
+                0x000015a8       0x44 ./src/ff.o
+                0x000015a8                clust2sect
+ .text.dir_sdi  0x000015ec      0x118 ./src/ff.o
+ .text.dir_next
+                0x00001704      0x1e0 ./src/ff.o
+ .text.cmp_lfn  0x000018e4      0x100 ./src/ff.o
+ .text.pick_lfn
+                0x000019e4       0xf0 ./src/ff.o
+ .text.fit_lfn  0x00001ad4      0x110 ./src/ff.o
+ .text.gen_numname
+                0x00001be4      0x108 ./src/ff.o
+                0x00001be4                gen_numname
+ .text.sum_sfn  0x00001cec       0x50 ./src/ff.o
+ .text.dir_find
+                0x00001d3c      0x170 ./src/ff.o
+ .text.dir_read
+                0x00001eac      0x140 ./src/ff.o
+ .text.dir_register
+                0x00001fec      0x2c0 ./src/ff.o
+ .text.dir_remove
+                0x000022ac       0xa0 ./src/ff.o
+ .text.create_name
+                0x0000234c      0x44c ./src/ff.o
+ .text.get_fileinfo
+                0x00002798      0x22c ./src/ff.o
+ .text.follow_path
+                0x000029c4      0x150 ./src/ff.o
+ .text.check_fs
+                0x00002b14       0xe8 ./src/ff.o
+ .text.chk_mounted
+                0x00002bfc      0x5d8 ./src/ff.o
+ .text.validate
+                0x000031d4       0x54 ./src/ff.o
+ .text.f_mount  0x00003228       0x64 ./src/ff.o
+                0x00003228                f_mount
+ .text.f_open   0x0000328c      0x35c ./src/ff.o
+                0x0000328c                f_open
+ .text.f_read   0x000035e8      0x2f8 ./src/ff.o
+                0x000035e8                f_read
+ .text.f_write  0x000038e0      0x358 ./src/ff.o
+                0x000038e0                f_write
+ .text.f_sync   0x00003c38      0x1c0 ./src/ff.o
+                0x00003c38                f_sync
+ .text.f_close  0x00003df8       0x2c ./src/ff.o
+                0x00003df8                f_close
+ .text.f_chdrive
+                0x00003e24       0x34 ./src/ff.o
+                0x00003e24                f_chdrive
+ .text.f_chdir  0x00003e58       0xe4 ./src/ff.o
+                0x00003e58                f_chdir
+ .text.f_lseek  0x00003f3c      0x2ec ./src/ff.o
+                0x00003f3c                f_lseek
+ .text.f_opendir
+                0x00004228       0xe8 ./src/ff.o
+                0x00004228                f_opendir
+ .text.f_readdir
+                0x00004310       0xa8 ./src/ff.o
+                0x00004310                f_readdir
+ .text.f_getfree
+                0x000043b8      0x1dc ./src/ff.o
+                0x000043b8                f_getfree
+ .text.f_truncate
+                0x00004594      0x12c ./src/ff.o
+                0x00004594                f_truncate
+ .text.f_unlink
+                0x000046c0      0x1d8 ./src/ff.o
+                0x000046c0                f_unlink
+ .text.f_mkdir  0x00004898      0x394 ./src/ff.o
+                0x00004898                f_mkdir
+ .text.f_chmod  0x00004c2c       0xe8 ./src/ff.o
+                0x00004c2c                f_chmod
+ .text.f_utime  0x00004d14       0xf4 ./src/ff.o
+                0x00004d14                f_utime
+ .text.f_rename
+                0x00004e08      0x280 ./src/ff.o
+                0x00004e08                f_rename
+ .text.f_mkfs   0x00005088      0xbac ./src/ff.o
+                0x00005088                f_mkfs
+ .text.ff_test_term_timer_callback
+                0x00005c34       0x24 ./src/ff_test_term.o
+                0x00005c34                ff_test_term_timer_callback
+ .text.scan_files
+                0x00005c58      0x154 ./src/ff_test_term.o
+ .text.put_rc   0x00005dac       0x6c ./src/ff_test_term.o
+ .text.ff_test_term
+                0x00005e18     0x15f4 ./src/ff_test_term.o
+                0x00005e18                ff_test_term
+ .text.CLKPWR_SetPCLKDiv
+                0x0000740c       0xcc ./src/lpc17xx_clkpwr.o
+                0x0000740c                CLKPWR_SetPCLKDiv
+ .text.CLKPWR_GetPCLKSEL
+                0x000074d8       0x54 ./src/lpc17xx_clkpwr.o
+                0x000074d8                CLKPWR_GetPCLKSEL
+ .text.CLKPWR_GetPCLK
+                0x0000752c       0x74 ./src/lpc17xx_clkpwr.o
+                0x0000752c                CLKPWR_GetPCLK
+ .text.CLKPWR_ConfigPPWR
+                0x000075a0       0x78 ./src/lpc17xx_clkpwr.o
+                0x000075a0                CLKPWR_ConfigPPWR
+ .text.GPIO_GetPointer
+                0x00007618       0x7c ./src/lpc17xx_gpio.o
+ .text.GPIO_SetDir
+                0x00007694       0x54 ./src/lpc17xx_gpio.o
+                0x00007694                GPIO_SetDir
+ .text.GPIO_SetValue
+                0x000076e8       0x2c ./src/lpc17xx_gpio.o
+                0x000076e8                GPIO_SetValue
+ .text.GPIO_ClearValue
+                0x00007714       0x2c ./src/lpc17xx_gpio.o
+                0x00007714                GPIO_ClearValue
+ .text.FIO_SetValue
+                0x00007740       0x20 ./src/lpc17xx_gpio.o
+                0x00007740                FIO_SetValue
+ .text.FIO_ClearValue
+                0x00007760       0x20 ./src/lpc17xx_gpio.o
+                0x00007760                FIO_ClearValue
+ .text.NVIC_DeInit
+                0x00007780       0x7c ./src/lpc17xx_nvic.o
+                0x00007780                NVIC_DeInit
+ .text.NVIC_SCBDeInit
+                0x000077fc       0xbc ./src/lpc17xx_nvic.o
+                0x000077fc                NVIC_SCBDeInit
+ .text.NVIC_SetVTOR
+                0x000078b8       0x28 ./src/lpc17xx_nvic.o
+                0x000078b8                NVIC_SetVTOR
+ .text.PINSEL_SetPinFunc
+                0x000078e0       0x9c ./src/lpc17xx_pinsel.o
+                0x000078e0                PINSEL_SetPinFunc
+ .text.PINSEL_SetResistorMode
+                0x0000797c       0x9c ./src/lpc17xx_pinsel.o
+                0x0000797c                PINSEL_SetResistorMode
+ .text.PINSEL_SetOpenDrainMode
+                0x00007a18       0x7c ./src/lpc17xx_pinsel.o
+                0x00007a18                PINSEL_SetOpenDrainMode
+ .text.PINSEL_ConfigPin
+                0x00007a94       0x54 ./src/lpc17xx_pinsel.o
+                0x00007a94                PINSEL_ConfigPin
+ .text.RTC_Init
+                0x00007ae8       0x64 ./src/lpc17xx_rtc.o
+                0x00007ae8                RTC_Init
+ .text.RTC_Cmd  0x00007b4c       0x78 ./src/lpc17xx_rtc.o
+                0x00007b4c                RTC_Cmd
+ .text.RTC_SetFullTime
+                0x00007bc4       0xc4 ./src/lpc17xx_rtc.o
+                0x00007bc4                RTC_SetFullTime
+ .text.RTC_CalibCounterCmd
+                0x00007c88       0x78 ./src/lpc17xx_rtc.o
+                0x00007c88                RTC_CalibCounterCmd
+ .text.RTC_CalibConfig
+                0x00007d00       0x8c ./src/lpc17xx_rtc.o
+                0x00007d00                RTC_CalibConfig
+ .text.SSP_getNum
+                0x00007d8c       0x40 ./src/lpc17xx_ssp.o
+ .text.SSP_SetClock
+                0x00007dcc       0xf8 ./src/lpc17xx_ssp.o
+                0x00007dcc                SSP_SetClock
+ .text.SSP_DeInit
+                0x00007ec4       0x74 ./src/lpc17xx_ssp.o
+                0x00007ec4                SSP_DeInit
+ .text.SSP_Init
+                0x00007f38      0x10c ./src/lpc17xx_ssp.o
+                0x00007f38                SSP_Init
+ .text.SSP_ConfigStructInit
+                0x00008044       0x48 ./src/lpc17xx_ssp.o
+                0x00008044                SSP_ConfigStructInit
+ .text.SSP_Cmd  0x0000808c       0x7c ./src/lpc17xx_ssp.o
+                0x0000808c                SSP_Cmd
+ .text.getUartNum
+                0x00008108       0x54 ./src/lpc17xx_uart.o
+                0x00008108                getUartNum
+ .text.uart_set_divisors
+                0x0000815c      0x25c ./src/lpc17xx_uart.o
+                0x0000815c                uart_set_divisors
+ .text.UART_GenIntHandler
+                0x000083b8      0x1c8 ./src/lpc17xx_uart.o
+                0x000083b8                UART_GenIntHandler
+ .text.UART_Init
+                0x00008580      0x368 ./src/lpc17xx_uart.o
+                0x00008580                UART_Init
+ .text.UART_ConfigStructInit
+                0x000088e8       0x34 ./src/lpc17xx_uart.o
+                0x000088e8                UART_ConfigStructInit
+ .text.UART_SendData
+                0x0000891c       0x78 ./src/lpc17xx_uart.o
+                0x0000891c                UART_SendData
+ .text.UART_ReceiveData
+                0x00008994       0x78 ./src/lpc17xx_uart.o
+                0x00008994                UART_ReceiveData
+ .text.UART_IntConfig
+                0x00008a0c      0x1d0 ./src/lpc17xx_uart.o
+                0x00008a0c                UART_IntConfig
+ .text.UART_CheckBusy
+                0x00008bdc       0x2c ./src/lpc17xx_uart.o
+                0x00008bdc                UART_CheckBusy
+ .text.UART_FIFOConfig
+                0x00008c08      0x184 ./src/lpc17xx_uart.o
+                0x00008c08                UART_FIFOConfig
+ .text.UART_FIFOConfigStructInit
+                0x00008d8c       0x34 ./src/lpc17xx_uart.o
+                0x00008d8c                UART_FIFOConfigStructInit
+ .text.UART_TxCmd
+                0x00008dc0       0xe8 ./src/lpc17xx_uart.o
+                0x00008dc0                UART_TxCmd
+ .text.UART_Send
+                0x00008ea8      0x10c ./src/lpc17xx_uart.o
+                0x00008ea8                UART_Send
+ .text.UART_Receive
+                0x00008fb4       0xd8 ./src/lpc17xx_uart.o
+                0x00008fb4                UART_Receive
+ .text.UART_SetupCbs
+                0x0000908c       0xb4 ./src/lpc17xx_uart.o
+                0x0000908c                UART_SetupCbs
+ .text.UART0_StdIntHandler
+                0x00009140       0x14 ./src/lpc17xx_uart.o
+                0x00009140                UART0_StdIntHandler
+ .text.NVIC_SetPriorityGrouping
+                0x00009154       0x50 ./src/main.o
+ .text.NVIC_SetPriority
+                0x000091a4       0x5c ./src/main.o
+ .text.SysTick_Config
+                0x00009200       0x64 ./src/main.o
+ .text.init_in_main
+                0x00009264       0x68 ./src/main.o
+ .text.LED1_on  0x000092cc       0x14 ./src/main.o
+ .text.LED1_off
+                0x000092e0       0x14 ./src/main.o
+ .text.SysTick_Handler
+                0x000092f4       0xc4 ./src/main.o
+                0x000092f4                SysTick_Handler
+ .text.c_entry  0x000093b8       0xf8 ./src/main.o
+                0x000093b8                c_entry
+ .text.main     0x000094b0       0x10 ./src/main.o
+                0x000094b0                main
+ .text.check_failed
+                0x000094c0       0x24 ./src/main.o
+                0x000094c0                check_failed
+ .text.xputc    0x000094e4       0x38 ./src/monitor.o
+                0x000094e4                xputc
+ .text.xputs    0x0000951c       0x2c ./src/monitor.o
+                0x0000951c                xputs
+ .text.xprintf  0x00009548      0x2e8 ./src/monitor.o
+                0x00009548                xprintf
+ .text.put_dump
+                0x00009830       0xa8 ./src/monitor.o
+                0x00009830                put_dump
+ .text.xatoi    0x000098d8      0x184 ./src/monitor.o
+                0x000098d8                xatoi
+ .text.get_line
+                0x00009a5c       0xc4 ./src/monitor.o
+                0x00009a5c                get_line
+ .text.xstrlen  0x00009b20       0x40 ./src/monitor.o
+                0x00009b20                xstrlen
+ .text.xstrcpy  0x00009b60       0x40 ./src/monitor.o
+                0x00009b60                xstrcpy
+ .text.xmemset  0x00009ba0       0x48 ./src/monitor.o
+                0x00009ba0                xmemset
+ .text.xstrchr  0x00009be8       0x3c ./src/monitor.o
+                0x00009be8                xstrchr
+ .text.rtc_cal_config
+                0x00009c24       0xb4 ./src/rtc_cal.o
+                0x00009c24                rtc_cal_config
+ .text.rtc_cal_init
+                0x00009cd8       0x54 ./src/rtc_cal.o
+                0x00009cd8                rtc_cal_init
+ .text.rtc_cal_settime
+                0x00009d2c       0x40 ./src/rtc_cal.o
+                0x00009d2c                rtc_cal_settime
+ .text.rtc_cal_gettime
+                0x00009d6c       0xbc ./src/rtc_cal.o
+                0x00009d6c                rtc_cal_gettime
+ .text.socket_is_empty
+                0x00009e28       0x10 ./src/spi_sd_lpc17xx.o
+ .text.socket_is_write_protected
+                0x00009e38       0x10 ./src/spi_sd_lpc17xx.o
+ .text.socket_power_on
+                0x00009e48       0x20 ./src/spi_sd_lpc17xx.o
+ .text.socket_power_off
+                0x00009e68       0x20 ./src/spi_sd_lpc17xx.o
+ .text.socket_is_powered
+                0x00009e88       0x18 ./src/spi_sd_lpc17xx.o
+ .text.socket_init
+                0x00009ea0       0x58 ./src/spi_sd_lpc17xx.o
+ .text.select_card
+                0x00009ef8       0x14 ./src/spi_sd_lpc17xx.o
+ .text.de_select_card
+                0x00009f0c       0x14 ./src/spi_sd_lpc17xx.o
+ .text.spi_set_speed
+                0x00009f20       0x44 ./src/spi_sd_lpc17xx.o
+ .text.spi_init
+                0x00009f64      0x100 ./src/spi_sd_lpc17xx.o
+ .text.spi_close
+                0x0000a064       0x7c ./src/spi_sd_lpc17xx.o
+                0x0000a064                spi_close
+ .text.spi_rw   0x0000a0e0       0x44 ./src/spi_sd_lpc17xx.o
+ .text.rcvr_spi
+                0x0000a124       0x14 ./src/spi_sd_lpc17xx.o
+ .text.spi_rcvr_block
+                0x0000a138       0xf4 ./src/spi_sd_lpc17xx.o
+ .text.spi_xmit_block
+                0x0000a22c       0xd8 ./src/spi_sd_lpc17xx.o
+ .text.wait_ready
+                0x0000a304       0x40 ./src/spi_sd_lpc17xx.o
+ .text.release_spi
+                0x0000a344       0x10 ./src/spi_sd_lpc17xx.o
+ .text.power_on
+                0x0000a354       0x3c ./src/spi_sd_lpc17xx.o
+ .text.power_off
+                0x0000a390       0x44 ./src/spi_sd_lpc17xx.o
+ .text.rcvr_datablock
+                0x0000a3d4       0x60 ./src/spi_sd_lpc17xx.o
+ .text.xmit_datablock
+                0x0000a434       0x68 ./src/spi_sd_lpc17xx.o
+ .text.send_cmd
+                0x0000a49c       0xec ./src/spi_sd_lpc17xx.o
+ .text.MMC_disk_initialize
+                0x0000a588      0x204 ./src/spi_sd_lpc17xx.o
+                0x0000a588                MMC_disk_initialize
+ .text.MMC_disk_status
+                0x0000a78c       0x18 ./src/spi_sd_lpc17xx.o
+                0x0000a78c                MMC_disk_status
+ .text.MMC_disk_read
+                0x0000a7a4       0xdc ./src/spi_sd_lpc17xx.o
+                0x0000a7a4                MMC_disk_read
+ .text.MMC_disk_write
+                0x0000a880      0x120 ./src/spi_sd_lpc17xx.o
+                0x0000a880                MMC_disk_write
+ .text.MMC_disk_ioctl
+                0x0000a9a0      0x424 ./src/spi_sd_lpc17xx.o
+                0x0000a9a0                MMC_disk_ioctl
+ .text.MMC_disk_timerproc
+                0x0000adc4      0x100 ./src/spi_sd_lpc17xx.o
+                0x0000adc4                MMC_disk_timerproc
+ .text.SystemInit
+                0x0000aec4       0x9c C:\nxp\LPCXpresso_5.2.4_2122\workspace\CMSISv2p00_LPC17xx\Debug\libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+                0x0000aec4                SystemInit
+ .text.__weak_main
+                0x0000af60        0x4 c:/nxp/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(__weak__main.o)
+                0x0000af60                __weak_main
+                0x0000af60                __main
+ *(.rodata .rodata.*)
+ .rodata.Tbl    0x0000af64      0x100 ./src/ccsbcs.o
+ .rodata.tbl_lower.3874
+                0x0000b064      0x1e0 ./src/ccsbcs.o
+ .rodata.tbl_upper.3875
+                0x0000b244      0x1e0 ./src/ccsbcs.o
+ .rodata.LfnOfs
+                0x0000b424       0x10 ./src/ff.o
+ .rodata        0x0000b434       0x3c ./src/ff.o
+ .rodata.vst.4391
+                0x0000b470       0x18 ./src/ff.o
+ .rodata.cst.4392
+                0x0000b488       0x18 ./src/ff.o
+ .rodata.excvt.4124
+                0x0000b4a0       0x80 ./src/ff.o
+ .rodata        0x0000b520      0x8c8 ./src/ff_test_term.o
+ .rodata.ft.5180
+                0x0000bde8        0x4 ./src/ff_test_term.o
+ .rodata        0x0000bdec       0x18 ./src/lpc17xx_rtc.o
+ .rodata        0x0000be04       0x18 ./src/lpc17xx_ssp.o
+ .rodata        0x0000be1c       0x18 ./src/lpc17xx_uart.o
+ .rodata        0x0000be34       0xd0 ./src/main.o
+ .rodata        0x0000bf04       0x10 ./src/monitor.o
+ .rodata.socket_state_mask_cp
+                0x0000bf14        0x4 ./src/spi_sd_lpc17xx.o
+ .rodata.socket_state_mask_wp
+                0x0000bf18        0x4 ./src/spi_sd_lpc17xx.o
+                0x0000bf1c                . = ALIGN (0x4)
+
+.glue_7         0x0000bf1c        0x0
+ .glue_7        0x00000000        0x0 linker stubs
+
+.glue_7t        0x0000bf1c        0x0
+ .glue_7t       0x00000000        0x0 linker stubs
+
+.vfp11_veneer   0x0000bf1c        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x0000bf1c        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x0000bf1c                __exidx_start = .
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x0000bf1c                __exidx_end = .
+                0x0000bf1c                _etext = .
+
+.data_RAM2      0x2007c000        0x0 load address 0x0000bf1c
+ FILL mask 0xff
+ *(.data.$RAM2*)
+ *(.data.$RamAHB32*)
+                0x2007c000                . = ALIGN (0x4)
+
+.uninit_RESERVED
+                0x10000000        0x0
+ *(.bss.$RESERVED*)
+                0x10000000                . = ALIGN (0x4)
+                0x10000000                _end_uninit_RESERVED = .
+
+.data           0x10000000        0x8 load address 0x0000bf1c
+ FILL mask 0xff
+                0x10000000                _data = .
+ *(vtable)
+ *(.data*)
+ .data.Stat     0x10000000        0x4 ./src/spi_sd_lpc17xx.o
+ .data.SystemCoreClock
+                0x10000004        0x4 C:\nxp\LPCXpresso_5.2.4_2122\workspace\CMSISv2p00_LPC17xx\Debug\libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+                0x10000004                SystemCoreClock
+                0x10000008                . = ALIGN (0x4)
+                0x10000008                _edata = .
+
+.bss_RAM2       0x2007c000        0x0
+ *(.bss.$RAM2*)
+ *(.bss.$RamAHB32*)
+                0x2007c000                . = ALIGN (0x4)
+
+.bss            0x10000008     0x206c
+                0x10000008                _bss = .
+ *(.bss*)
+ .bss.rb        0x10000008      0x210 ./src/comm.o
+ .bss.TxIntStat
+                0x10000218        0x1 ./src/comm.o
+ *fill*         0x10000219        0x1 00
+ .bss.Fsid      0x1000021a        0x2 ./src/ff.o
+ .bss.FatFs     0x1000021c        0x4 ./src/ff.o
+ .bss.Drive     0x10000220        0x1 ./src/ff.o
+ *fill*         0x10000221        0x3 00
+ .bss.LfnBuf    0x10000224      0x200 ./src/ff.o
+ .bss.sspdat    0x10000424       0x18 ./src/lpc17xx_ssp.o
+ .bss.uartCbsDat
+                0x1000043c       0x40 ./src/lpc17xx_uart.o
+                0x1000043c                uartCbsDat
+ .bss.pfnModemCbs
+                0x1000047c        0x4 ./src/lpc17xx_uart.o
+                0x1000047c                pfnModemCbs
+ .bss.led_prescale.5343
+                0x10000480        0x4 ./src/main.o
+ .bss.flip.5342
+                0x10000484        0x4 ./src/main.o
+ .bss.div10.5344
+                0x10000488        0x4 ./src/main.o
+ .bss.Timer1    0x1000048c        0x4 ./src/spi_sd_lpc17xx.o
+ .bss.Timer2    0x10000490        0x4 ./src/spi_sd_lpc17xx.o
+ .bss.CardType  0x10000494        0x1 ./src/spi_sd_lpc17xx.o
+ .bss.socket_powered
+                0x10000495        0x1 ./src/spi_sd_lpc17xx.o
+ *fill*         0x10000496        0x2 00
+ .bss.pv.5298   0x10000498        0x4 ./src/spi_sd_lpc17xx.o
+ *(COMMON)
+ COMMON         0x1000049c     0x1bcc ./src/ff_test_term.o
+                0x1000049c                Fatfs
+                0x100006d0                File1
+                0x100008f4                Finfo
+                0x10000914                acc_dirs
+                0x10000916                acc_files
+                0x10000918                Timer
+                0x1000091c                Buff
+                0x1000191c                File2
+                0x10001b40                Lfname
+                0x10001c40                Dir
+                0x10001c64                acc_size
+                0x10001c68                Line
+ COMMON         0x10002068        0x4 ./src/main.o
+                0x10002068                SysTickCnt
+ COMMON         0x1000206c        0x8 ./src/monitor.o
+                0x1000206c                xfunc_in
+                0x10002070                xfunc_out
+                0x10002074                . = ALIGN (0x4)
+                0x10002074                _ebss = .
+                0x10002074                PROVIDE (end, .)
+
+.noinit_RAM2    0x2007c000        0x0
+ *(.noinit.$RAM2*)
+ *(.noinit.$RamAHB32*)
+                0x2007c000                . = ALIGN (0x4)
+
+.noinit         0x10002074        0x0
+                0x10002074                _noinit = .
+ *(.noinit*)
+                0x10002074                . = ALIGN (0x4)
+                0x10002074                _end_noinit = .
+                0x10002074                PROVIDE (_pvHeapStart, .)
+                0x10008000                PROVIDE (_vStackTop, (__top_RamLoc32 - 0x0))
+OUTPUT(PruebaSD.axf elf32-littlearm)
+
+.debug_info     0x00000000    0x1204e
+ .debug_info    0x00000000      0x182 ./src/ccsbcs.o
+ .debug_info    0x00000182      0xe1e ./src/comm.o
+ .debug_info    0x00000fa0      0x2dd ./src/cr_startup_lpc176x.o
+ .debug_info    0x0000127d      0x2c6 ./src/diskio.o
+ .debug_info    0x00001543      0x182 ./src/fattime.o
+ .debug_info    0x000016c5     0x1fe3 ./src/ff.o
+ .debug_info    0x000036a8      0x964 ./src/ff_test_term.o
+ .debug_info    0x0000400c      0x626 ./src/lpc17xx_adc.o
+ .debug_info    0x00004632     0x1210 ./src/lpc17xx_can.o
+ .debug_info    0x00005842      0x6d7 ./src/lpc17xx_clkpwr.o
+ .debug_info    0x00005f19      0x290 ./src/lpc17xx_dac.o
+ .debug_info    0x000061a9      0xe3d ./src/lpc17xx_emac.o
+ .debug_info    0x00006fe6     0x10b4 ./src/lpc17xx_gpdma.o
+ .debug_info    0x0000809a      0xba0 ./src/lpc17xx_gpio.o
+ .debug_info    0x00008c3a      0xccf ./src/lpc17xx_i2c.o
+ .debug_info    0x00009909      0x93c ./src/lpc17xx_i2s.o
+ .debug_info    0x0000a245      0x811 ./src/lpc17xx_mcpwm.o
+ .debug_info    0x0000aa56      0x417 ./src/lpc17xx_nvic.o
+ .debug_info    0x0000ae6d      0x4bc ./src/lpc17xx_pinsel.o
+ .debug_info    0x0000b329      0x82e ./src/lpc17xx_pwm.o
+ .debug_info    0x0000bb57      0x851 ./src/lpc17xx_qei.o
+ .debug_info    0x0000c3a8      0x324 ./src/lpc17xx_rit.o
+ .debug_info    0x0000c6cc      0xa1e ./src/lpc17xx_rtc.o
+ .debug_info    0x0000d0ea      0x64f ./src/lpc17xx_spi.o
+ .debug_info    0x0000d739      0x867 ./src/lpc17xx_ssp.o
+ .debug_info    0x0000dfa0      0x84a ./src/lpc17xx_timer.o
+ .debug_info    0x0000e7ea     0x149d ./src/lpc17xx_uart.o
+ .debug_info    0x0000fc87      0x370 ./src/lpc17xx_wdt.o
+ .debug_info    0x0000fff7      0x897 ./src/main.o
+ .debug_info    0x0001088e      0x44b ./src/monitor.o
+ .debug_info    0x00010cd9      0x5a8 ./src/rtc_cal.o
+ .debug_info    0x00011281      0x94d ./src/spi_sd_lpc17xx.o
+ .debug_info    0x00011bce       0x73 ./src/startup_LPC17xx.o
+ .debug_info    0x00011c41       0x7e ./src/syscall.o
+ .debug_info    0x00011cbf      0x38f C:\nxp\LPCXpresso_5.2.4_2122\workspace\CMSISv2p00_LPC17xx\Debug\libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+
+.debug_abbrev   0x00000000     0x3336
+ .debug_abbrev  0x00000000       0x9a ./src/ccsbcs.o
+ .debug_abbrev  0x0000009a      0x29e ./src/comm.o
+ .debug_abbrev  0x00000338      0x12b ./src/cr_startup_lpc176x.o
+ .debug_abbrev  0x00000463       0xdf ./src/diskio.o
+ .debug_abbrev  0x00000542       0xb5 ./src/fattime.o
+ .debug_abbrev  0x000005f7      0x1eb ./src/ff.o
+ .debug_abbrev  0x000007e2      0x210 ./src/ff_test_term.o
+ .debug_abbrev  0x000009f2      0x13f ./src/lpc17xx_adc.o
+ .debug_abbrev  0x00000b31      0x1c4 ./src/lpc17xx_can.o
+ .debug_abbrev  0x00000cf5      0x197 ./src/lpc17xx_clkpwr.o
+ .debug_abbrev  0x00000e8c       0xec ./src/lpc17xx_dac.o
+ .debug_abbrev  0x00000f78      0x21d ./src/lpc17xx_emac.o
+ .debug_abbrev  0x00001195      0x1ed ./src/lpc17xx_gpdma.o
+ .debug_abbrev  0x00001382      0x185 ./src/lpc17xx_gpio.o
+ .debug_abbrev  0x00001507      0x24a ./src/lpc17xx_i2c.o
+ .debug_abbrev  0x00001751      0x196 ./src/lpc17xx_i2s.o
+ .debug_abbrev  0x000018e7      0x154 ./src/lpc17xx_mcpwm.o
+ .debug_abbrev  0x00001a3b      0x10d ./src/lpc17xx_nvic.o
+ .debug_abbrev  0x00001b48      0x10a ./src/lpc17xx_pinsel.o
+ .debug_abbrev  0x00001c52      0x189 ./src/lpc17xx_pwm.o
+ .debug_abbrev  0x00001ddb      0x1c9 ./src/lpc17xx_qei.o
+ .debug_abbrev  0x00001fa4      0x120 ./src/lpc17xx_rit.o
+ .debug_abbrev  0x000020c4      0x16b ./src/lpc17xx_rtc.o
+ .debug_abbrev  0x0000222f      0x18e ./src/lpc17xx_spi.o
+ .debug_abbrev  0x000023bd      0x1d3 ./src/lpc17xx_ssp.o
+ .debug_abbrev  0x00002590      0x19f ./src/lpc17xx_timer.o
+ .debug_abbrev  0x0000272f      0x243 ./src/lpc17xx_uart.o
+ .debug_abbrev  0x00002972      0x15d ./src/lpc17xx_wdt.o
+ .debug_abbrev  0x00002acf      0x23d ./src/main.o
+ .debug_abbrev  0x00002d0c      0x159 ./src/monitor.o
+ .debug_abbrev  0x00002e65      0x14b ./src/rtc_cal.o
+ .debug_abbrev  0x00002fb0      0x265 ./src/spi_sd_lpc17xx.o
+ .debug_abbrev  0x00003215       0x12 ./src/startup_LPC17xx.o
+ .debug_abbrev  0x00003227       0x2c ./src/syscall.o
+ .debug_abbrev  0x00003253       0xe3 C:\nxp\LPCXpresso_5.2.4_2122\workspace\CMSISv2p00_LPC17xx\Debug\libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+
+.debug_loc      0x00000000     0x61b6
+ .debug_loc     0x00000000       0x70 ./src/ccsbcs.o
+ .debug_loc     0x00000070      0x370 ./src/comm.o
+ .debug_loc     0x000003e0      0x102 ./src/cr_startup_lpc176x.o
+ .debug_loc     0x000004e2      0x144 ./src/diskio.o
+ .debug_loc     0x00000626       0x38 ./src/fattime.o
+ .debug_loc     0x0000065e      0xb82 ./src/ff.o
+ .debug_loc     0x000011e0       0xd8 ./src/ff_test_term.o
+ .debug_loc     0x000012b8      0x2d8 ./src/lpc17xx_adc.o
+ .debug_loc     0x00001590      0x3f6 ./src/lpc17xx_can.o
+ .debug_loc     0x00001986      0x190 ./src/lpc17xx_clkpwr.o
+ .debug_loc     0x00001b16      0x118 ./src/lpc17xx_dac.o
+ .debug_loc     0x00001c2e      0x598 ./src/lpc17xx_emac.o
+ .debug_loc     0x000021c6       0xd4 ./src/lpc17xx_gpdma.o
+ .debug_loc     0x0000229a      0x4d0 ./src/lpc17xx_gpio.o
+ .debug_loc     0x0000276a      0x4e4 ./src/lpc17xx_i2c.o
+ .debug_loc     0x00002c4e      0x462 ./src/lpc17xx_i2s.o
+ .debug_loc     0x000030b0      0x348 ./src/lpc17xx_mcpwm.o
+ .debug_loc     0x000033f8       0xa8 ./src/lpc17xx_nvic.o
+ .debug_loc     0x000034a0      0x150 ./src/lpc17xx_pinsel.o
+ .debug_loc     0x000035f0      0x310 ./src/lpc17xx_pwm.o
+ .debug_loc     0x00003900      0x49a ./src/lpc17xx_qei.o
+ .debug_loc     0x00003d9a      0x188 ./src/lpc17xx_rit.o
+ .debug_loc     0x00003f22      0x460 ./src/lpc17xx_rtc.o
+ .debug_loc     0x00004382      0x304 ./src/lpc17xx_spi.o
+ .debug_loc     0x00004686      0x448 ./src/lpc17xx_ssp.o
+ .debug_loc     0x00004ace      0x348 ./src/lpc17xx_timer.o
+ .debug_loc     0x00004e16      0x742 ./src/lpc17xx_uart.o
+ .debug_loc     0x00005558      0x190 ./src/lpc17xx_wdt.o
+ .debug_loc     0x000056e8      0x200 ./src/main.o
+ .debug_loc     0x000058e8      0x23e ./src/monitor.o
+ .debug_loc     0x00005b26       0xe0 ./src/rtc_cal.o
+ .debug_loc     0x00005c06      0x590 ./src/spi_sd_lpc17xx.o
+ .debug_loc     0x00006196       0x20 C:\nxp\LPCXpresso_5.2.4_2122\workspace\CMSISv2p00_LPC17xx\Debug\libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+
+.debug_aranges  0x00000000     0x11c8
+ .debug_aranges
+                0x00000000       0x28 ./src/ccsbcs.o
+ .debug_aranges
+                0x00000028       0xa0 ./src/comm.o
+ .debug_aranges
+                0x000000c8       0x80 ./src/cr_startup_lpc176x.o
+ .debug_aranges
+                0x00000148       0x48 ./src/diskio.o
+ .debug_aranges
+                0x00000190       0x20 ./src/fattime.o
+ .debug_aranges
+                0x000001b0      0x1b8 ./src/ff.o
+ .debug_aranges
+                0x00000368       0x38 ./src/ff_test_term.o
+ .debug_aranges
+                0x000003a0       0x80 ./src/lpc17xx_adc.o
+ .debug_aranges
+                0x00000420       0xa8 ./src/lpc17xx_can.o
+ .debug_aranges
+                0x000004c8       0x58 ./src/lpc17xx_clkpwr.o
+ .debug_aranges
+                0x00000520       0x40 ./src/lpc17xx_dac.o
+ .debug_aranges
+                0x00000560       0xe8 ./src/lpc17xx_emac.o
+ .debug_aranges
+                0x00000648       0x38 ./src/lpc17xx_gpdma.o
+ .debug_aranges
+                0x00000680       0xc8 ./src/lpc17xx_gpio.o
+ .debug_aranges
+                0x00000748       0xd0 ./src/lpc17xx_i2c.o
+ .debug_aranges
+                0x00000818       0xb8 ./src/lpc17xx_i2s.o
+ .debug_aranges
+                0x000008d0       0x90 ./src/lpc17xx_mcpwm.o
+ .debug_aranges
+                0x00000960       0x30 ./src/lpc17xx_nvic.o
+ .debug_aranges
+                0x00000990       0x48 ./src/lpc17xx_pinsel.o
+ .debug_aranges
+                0x000009d8       0x88 ./src/lpc17xx_pwm.o
+ .debug_aranges
+                0x00000a60       0xc0 ./src/lpc17xx_qei.o
+ .debug_aranges
+                0x00000b20       0x50 ./src/lpc17xx_rit.o
+ .debug_aranges
+                0x00000b70       0xb8 ./src/lpc17xx_rtc.o
+ .debug_aranges
+                0x00000c28       0x88 ./src/lpc17xx_spi.o
+ .debug_aranges
+                0x00000cb0       0xb8 ./src/lpc17xx_ssp.o
+ .debug_aranges
+                0x00000d68       0x90 ./src/lpc17xx_timer.o
+ .debug_aranges
+                0x00000df8      0x128 ./src/lpc17xx_uart.o
+ .debug_aranges
+                0x00000f20       0x58 ./src/lpc17xx_wdt.o
+ .debug_aranges
+                0x00000f78       0x68 ./src/main.o
+ .debug_aranges
+                0x00000fe0       0x68 ./src/monitor.o
+ .debug_aranges
+                0x00001048       0x38 ./src/rtc_cal.o
+ .debug_aranges
+                0x00001080       0xf8 ./src/spi_sd_lpc17xx.o
+ .debug_aranges
+                0x00001178       0x28 ./src/startup_LPC17xx.o
+ .debug_aranges
+                0x000011a0       0x28 C:\nxp\LPCXpresso_5.2.4_2122\workspace\CMSISv2p00_LPC17xx\Debug\libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+
+.debug_ranges   0x00000000      0xfb0
+ .debug_ranges  0x00000000       0x18 ./src/ccsbcs.o
+ .debug_ranges  0x00000018       0x90 ./src/comm.o
+ .debug_ranges  0x000000a8       0x70 ./src/cr_startup_lpc176x.o
+ .debug_ranges  0x00000118       0x38 ./src/diskio.o
+ .debug_ranges  0x00000150       0x10 ./src/fattime.o
+ .debug_ranges  0x00000160      0x1a8 ./src/ff.o
+ .debug_ranges  0x00000308       0x28 ./src/ff_test_term.o
+ .debug_ranges  0x00000330       0x70 ./src/lpc17xx_adc.o
+ .debug_ranges  0x000003a0       0x98 ./src/lpc17xx_can.o
+ .debug_ranges  0x00000438       0x48 ./src/lpc17xx_clkpwr.o
+ .debug_ranges  0x00000480       0x30 ./src/lpc17xx_dac.o
+ .debug_ranges  0x000004b0       0xd8 ./src/lpc17xx_emac.o
+ .debug_ranges  0x00000588       0x28 ./src/lpc17xx_gpdma.o
+ .debug_ranges  0x000005b0       0xb8 ./src/lpc17xx_gpio.o
+ .debug_ranges  0x00000668       0xc0 ./src/lpc17xx_i2c.o
+ .debug_ranges  0x00000728       0xa8 ./src/lpc17xx_i2s.o
+ .debug_ranges  0x000007d0       0x80 ./src/lpc17xx_mcpwm.o
+ .debug_ranges  0x00000850       0x20 ./src/lpc17xx_nvic.o
+ .debug_ranges  0x00000870       0x38 ./src/lpc17xx_pinsel.o
+ .debug_ranges  0x000008a8       0x78 ./src/lpc17xx_pwm.o
+ .debug_ranges  0x00000920       0xb0 ./src/lpc17xx_qei.o
+ .debug_ranges  0x000009d0       0x40 ./src/lpc17xx_rit.o
+ .debug_ranges  0x00000a10       0xa8 ./src/lpc17xx_rtc.o
+ .debug_ranges  0x00000ab8       0x78 ./src/lpc17xx_spi.o
+ .debug_ranges  0x00000b30       0xa8 ./src/lpc17xx_ssp.o
+ .debug_ranges  0x00000bd8       0x80 ./src/lpc17xx_timer.o
+ .debug_ranges  0x00000c58      0x118 ./src/lpc17xx_uart.o
+ .debug_ranges  0x00000d70       0x48 ./src/lpc17xx_wdt.o
+ .debug_ranges  0x00000db8       0x58 ./src/main.o
+ .debug_ranges  0x00000e10       0x58 ./src/monitor.o
+ .debug_ranges  0x00000e68       0x28 ./src/rtc_cal.o
+ .debug_ranges  0x00000e90       0xe8 ./src/spi_sd_lpc17xx.o
+ .debug_ranges  0x00000f78       0x20 ./src/startup_LPC17xx.o
+ .debug_ranges  0x00000f98       0x18 C:\nxp\LPCXpresso_5.2.4_2122\workspace\CMSISv2p00_LPC17xx\Debug\libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+
+.debug_line     0x00000000     0xe9fa
+ .debug_line    0x00000000      0x39b ./src/ccsbcs.o
+ .debug_line    0x0000039b      0x60f ./src/comm.o
+ .debug_line    0x000009aa      0x3ca ./src/cr_startup_lpc176x.o
+ .debug_line    0x00000d74      0x441 ./src/diskio.o
+ .debug_line    0x000011b5      0x456 ./src/fattime.o
+ .debug_line    0x0000160b     0x155d ./src/ff.o
+ .debug_line    0x00002b68      0x8ba ./src/ff_test_term.o
+ .debug_line    0x00003422      0x614 ./src/lpc17xx_adc.o
+ .debug_line    0x00003a36      0xc50 ./src/lpc17xx_can.o
+ .debug_line    0x00004686      0x4de ./src/lpc17xx_clkpwr.o
+ .debug_line    0x00004b64      0x4b1 ./src/lpc17xx_dac.o
+ .debug_line    0x00005015      0x7d7 ./src/lpc17xx_emac.o
+ .debug_line    0x000057ec      0x525 ./src/lpc17xx_gpdma.o
+ .debug_line    0x00005d11      0x5f7 ./src/lpc17xx_gpio.o
+ .debug_line    0x00006308      0x91f ./src/lpc17xx_i2c.o
+ .debug_line    0x00006c27      0x804 ./src/lpc17xx_i2s.o
+ .debug_line    0x0000742b      0x7ce ./src/lpc17xx_mcpwm.o
+ .debug_line    0x00007bf9      0x44a ./src/lpc17xx_nvic.o
+ .debug_line    0x00008043      0x476 ./src/lpc17xx_pinsel.o
+ .debug_line    0x000084b9      0x7a4 ./src/lpc17xx_pwm.o
+ .debug_line    0x00008c5d      0x7fd ./src/lpc17xx_qei.o
+ .debug_line    0x0000945a      0x51f ./src/lpc17xx_rit.o
+ .debug_line    0x00009979      0x8ac ./src/lpc17xx_rtc.o
+ .debug_line    0x0000a225      0x630 ./src/lpc17xx_spi.o
+ .debug_line    0x0000a855      0x858 ./src/lpc17xx_ssp.o
+ .debug_line    0x0000b0ad      0x766 ./src/lpc17xx_timer.o
+ .debug_line    0x0000b813      0xb8e ./src/lpc17xx_uart.o
+ .debug_line    0x0000c3a1      0x52e ./src/lpc17xx_wdt.o
+ .debug_line    0x0000c8cf      0x67b ./src/main.o
+ .debug_line    0x0000cf4a      0x561 ./src/monitor.o
+ .debug_line    0x0000d4ab      0x461 ./src/rtc_cal.o
+ .debug_line    0x0000d90c      0x941 ./src/spi_sd_lpc17xx.o
+ .debug_line    0x0000e24d       0x7c ./src/startup_LPC17xx.o
+ .debug_line    0x0000e2c9      0x352 ./src/syscall.o
+ .debug_line    0x0000e61b      0x3df C:\nxp\LPCXpresso_5.2.4_2122\workspace\CMSISv2p00_LPC17xx\Debug\libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+
+.debug_macinfo  0x00000000   0x132d43
+ .debug_macinfo
+                0x00000000     0x4a3e ./src/ccsbcs.o
+ .debug_macinfo
+                0x00004a3e     0xa354 ./src/comm.o
+ .debug_macinfo
+                0x0000ed92     0x3d45 ./src/cr_startup_lpc176x.o
+ .debug_macinfo
+                0x00012ad7     0x407d ./src/diskio.o
+ .debug_macinfo
+                0x00016b54     0x8d45 ./src/fattime.o
+ .debug_macinfo
+                0x0001f899     0x4ea5 ./src/ff.o
+ .debug_macinfo
+                0x0002473e     0x9ade ./src/ff_test_term.o
+ .debug_macinfo
+                0x0002e21c     0xa16d ./src/lpc17xx_adc.o
+ .debug_macinfo
+                0x00038389     0xb58c ./src/lpc17xx_can.o
+ .debug_macinfo
+                0x00043915     0x973e ./src/lpc17xx_clkpwr.o
+ .debug_macinfo
+                0x0004d053     0x9a9a ./src/lpc17xx_dac.o
+ .debug_macinfo
+                0x00056aed     0xb6e9 ./src/lpc17xx_emac.o
+ .debug_macinfo
+                0x000621d6     0xada1 ./src/lpc17xx_gpdma.o
+ .debug_macinfo
+                0x0006cf77     0x87f3 ./src/lpc17xx_gpio.o
+ .debug_macinfo
+                0x0007576a     0xa717 ./src/lpc17xx_i2c.o
+ .debug_macinfo
+                0x0007fe81     0xabbb ./src/lpc17xx_i2s.o
+ .debug_macinfo
+                0x0008aa3c     0xa321 ./src/lpc17xx_mcpwm.o
+ .debug_macinfo
+                0x00094d5d     0x8434 ./src/lpc17xx_nvic.o
+ .debug_macinfo
+                0x0009d191     0x8918 ./src/lpc17xx_pinsel.o
+ .debug_macinfo
+                0x000a5aa9     0xa1c6 ./src/lpc17xx_pwm.o
+ .debug_macinfo
+                0x000afc6f     0xb15f ./src/lpc17xx_qei.o
+ .debug_macinfo
+                0x000badce     0x99c3 ./src/lpc17xx_rit.o
+ .debug_macinfo
+                0x000c4791     0xa1b7 ./src/lpc17xx_rtc.o
+ .debug_macinfo
+                0x000ce948     0xa34d ./src/lpc17xx_spi.o
+ .debug_macinfo
+                0x000d8c95     0xaa0f ./src/lpc17xx_ssp.o
+ .debug_macinfo
+                0x000e36a4     0xa60c ./src/lpc17xx_timer.o
+ .debug_macinfo
+                0x000edcb0     0xb17e ./src/lpc17xx_uart.o
+ .debug_macinfo
+                0x000f8e2e     0xa0fd ./src/lpc17xx_wdt.o
+ .debug_macinfo
+                0x00102f2b     0xb38b ./src/main.o
+ .debug_macinfo
+                0x0010e2b6     0x23fc ./src/monitor.o
+ .debug_macinfo
+                0x001106b2     0x8d8e ./src/rtc_cal.o
+ .debug_macinfo
+                0x00119440     0xc8f8 ./src/spi_sd_lpc17xx.o
+ .debug_macinfo
+                0x00125d38     0x4ad8 ./src/syscall.o
+ .debug_macinfo
+                0x0012a810     0x8533 C:\nxp\LPCXpresso_5.2.4_2122\workspace\CMSISv2p00_LPC17xx\Debug\libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+
+.debug_str      0x00000000     0x577b
+ .debug_str     0x00000000      0x11c ./src/ccsbcs.o
+                                0x155 (size before relaxing)
+ .debug_str     0x0000011c      0x718 ./src/comm.o
+                                0x859 (size before relaxing)
+ .debug_str     0x00000834      0x177 ./src/cr_startup_lpc176x.o
+                                0x275 (size before relaxing)
+ .debug_str     0x000009ab       0x68 ./src/diskio.o
+                                0x1d9 (size before relaxing)
+ .debug_str     0x00000a13       0x35 ./src/fattime.o
+                                0x178 (size before relaxing)
+ .debug_str     0x00000a48      0x4f5 ./src/ff.o
+                                0x6b2 (size before relaxing)
+ .debug_str     0x00000f3d       0xb5 ./src/ff_test_term.o
+                                0x487 (size before relaxing)
+ .debug_str     0x00000ff2      0x363 ./src/lpc17xx_adc.o
+                                0x4d5 (size before relaxing)
+ .debug_str     0x00001355      0x872 ./src/lpc17xx_can.o
+                                0xa0e (size before relaxing)
+ .debug_str     0x00001bc7      0x1ca ./src/lpc17xx_clkpwr.o
+                                0x3be (size before relaxing)
+ .debug_str     0x00001d91      0x12e ./src/lpc17xx_dac.o
+                                0x25a (size before relaxing)
+ .debug_str     0x00001ebf      0x4e1 ./src/lpc17xx_emac.o
+                                0x71c (size before relaxing)
+ .debug_str     0x000023a0      0x381 ./src/lpc17xx_gpdma.o
+                                0x6fc (size before relaxing)
+ .debug_str     0x00002721      0x33e ./src/lpc17xx_gpio.o
+                                0x474 (size before relaxing)
+ .debug_str     0x00002a5f      0x41d ./src/lpc17xx_i2c.o
+                                0x824 (size before relaxing)
+ .debug_str     0x00002e7c      0x231 ./src/lpc17xx_i2s.o
+                                0x480 (size before relaxing)
+ .debug_str     0x000030ad      0x3f3 ./src/lpc17xx_mcpwm.o
+                                0x55c (size before relaxing)
+ .debug_str     0x000034a0       0x45 ./src/lpc17xx_nvic.o
+                                0x219 (size before relaxing)
+ .debug_str     0x000034e5      0x20d ./src/lpc17xx_pinsel.o
+                                0x3a9 (size before relaxing)
+ .debug_str     0x000036f2      0x419 ./src/lpc17xx_pwm.o
+                                0x5d0 (size before relaxing)
+ .debug_str     0x00003b0b      0x351 ./src/lpc17xx_qei.o
+                                0x4de (size before relaxing)
+ .debug_str     0x00003e5c       0xd9 ./src/lpc17xx_rit.o
+                                0x24b (size before relaxing)
+ .debug_str     0x00003f35      0x395 ./src/lpc17xx_rtc.o
+                                0x5ad (size before relaxing)
+ .debug_str     0x000042ca      0x22a ./src/lpc17xx_spi.o
+                                0x414 (size before relaxing)
+ .debug_str     0x000044f4      0x21a ./src/lpc17xx_ssp.o
+                                0x47f (size before relaxing)
+ .debug_str     0x0000470e      0x30e ./src/lpc17xx_timer.o
+                                0x592 (size before relaxing)
+ .debug_str     0x00004a1c      0x772 ./src/lpc17xx_uart.o
+                                0xc46 (size before relaxing)
+ .debug_str     0x0000518e      0x15e ./src/lpc17xx_wdt.o
+                                0x2d4 (size before relaxing)
+ .debug_str     0x000052ec      0x105 ./src/main.o
+                                0x5a8 (size before relaxing)
+ .debug_str     0x000053f1       0x5d ./src/monitor.o
+                                0x14b (size before relaxing)
+ .debug_str     0x0000544e       0x88 ./src/rtc_cal.o
+                                0x370 (size before relaxing)
+ .debug_str     0x000054d6      0x21b ./src/spi_sd_lpc17xx.o
+                                0x4bc (size before relaxing)
+ .debug_str     0x000056f1       0x11 ./src/syscall.o
+                                0x120 (size before relaxing)
+ .debug_str     0x00005702       0x79 C:\nxp\LPCXpresso_5.2.4_2122\workspace\CMSISv2p00_LPC17xx\Debug\libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+                                0x2b3 (size before relaxing)
+
+.comment        0x00000000       0xe0
+ .comment       0x00000000       0x70 ./src/ccsbcs.o
+                                 0x71 (size before relaxing)
+ .comment       0x00000000       0x71 ./src/comm.o
+ .comment       0x00000000       0x71 ./src/cr_startup_lpc176x.o
+ .comment       0x00000000       0x71 ./src/diskio.o
+ .comment       0x00000000       0x71 ./src/fattime.o
+ .comment       0x00000000       0x71 ./src/ff.o
+ .comment       0x00000000       0x71 ./src/ff_test_term.o
+ .comment       0x00000000       0x71 ./src/lpc17xx_adc.o
+ .comment       0x00000000       0x71 ./src/lpc17xx_can.o
+ .comment       0x00000000       0x71 ./src/lpc17xx_clkpwr.o
+ .comment       0x00000000       0x71 ./src/lpc17xx_dac.o
+ .comment       0x00000000       0x71 ./src/lpc17xx_emac.o
+ .comment       0x00000000       0x71 ./src/lpc17xx_gpdma.o
+ .comment       0x00000000       0x71 ./src/lpc17xx_gpio.o
+ .comment       0x00000000       0x71 ./src/lpc17xx_i2c.o
+ .comment       0x00000000       0x71 ./src/lpc17xx_i2s.o
+ .comment       0x00000000       0x71 ./src/lpc17xx_mcpwm.o
+ .comment       0x00000000       0x71 ./src/lpc17xx_nvic.o
+ .comment       0x00000000       0x71 ./src/lpc17xx_pinsel.o
+ .comment       0x00000000       0x71 ./src/lpc17xx_pwm.o
+ .comment       0x00000000       0x71 ./src/lpc17xx_qei.o
+ .comment       0x00000000       0x71 ./src/lpc17xx_rit.o
+ .comment       0x00000000       0x71 ./src/lpc17xx_rtc.o
+ .comment       0x00000000       0x71 ./src/lpc17xx_spi.o
+ .comment       0x00000000       0x71 ./src/lpc17xx_ssp.o
+ .comment       0x00000000       0x71 ./src/lpc17xx_timer.o
+ .comment       0x00000000       0x71 ./src/lpc17xx_uart.o
+ .comment       0x00000000       0x71 ./src/lpc17xx_wdt.o
+ .comment       0x00000000       0x71 ./src/main.o
+ .comment       0x00000000       0x71 ./src/monitor.o
+ .comment       0x00000000       0x71 ./src/rtc_cal.o
+ .comment       0x00000000       0x71 ./src/spi_sd_lpc17xx.o
+ .comment       0x00000000       0x71 ./src/syscall.o
+ .comment       0x00000000       0x71 C:\nxp\LPCXpresso_5.2.4_2122\workspace\CMSISv2p00_LPC17xx\Debug\libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .comment       0x00000070       0x70 c:/nxp/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(__weak__main.o)
+                                 0x71 (size before relaxing)
+
+.ARM.attributes
+                0x00000000       0x31
+ .ARM.attributes
+                0x00000000       0x33 ./src/ccsbcs.o
+ .ARM.attributes
+                0x00000033       0x33 ./src/comm.o
+ .ARM.attributes
+                0x00000066       0x33 ./src/cr_startup_lpc176x.o
+ .ARM.attributes
+                0x00000099       0x33 ./src/diskio.o
+ .ARM.attributes
+                0x000000cc       0x33 ./src/fattime.o
+ .ARM.attributes
+                0x000000ff       0x33 ./src/ff.o
+ .ARM.attributes
+                0x00000132       0x33 ./src/ff_test_term.o
+ .ARM.attributes
+                0x00000165       0x33 ./src/lpc17xx_adc.o
+ .ARM.attributes
+                0x00000198       0x33 ./src/lpc17xx_can.o
+ .ARM.attributes
+                0x000001cb       0x33 ./src/lpc17xx_clkpwr.o
+ .ARM.attributes
+                0x000001fe       0x33 ./src/lpc17xx_dac.o
+ .ARM.attributes
+                0x00000231       0x33 ./src/lpc17xx_emac.o
+ .ARM.attributes
+                0x00000264       0x33 ./src/lpc17xx_gpdma.o
+ .ARM.attributes
+                0x00000297       0x33 ./src/lpc17xx_gpio.o
+ .ARM.attributes
+                0x000002ca       0x33 ./src/lpc17xx_i2c.o
+ .ARM.attributes
+                0x000002fd       0x33 ./src/lpc17xx_i2s.o
+ .ARM.attributes
+                0x00000330       0x33 ./src/lpc17xx_mcpwm.o
+ .ARM.attributes
+                0x00000363       0x33 ./src/lpc17xx_nvic.o
+ .ARM.attributes
+                0x00000396       0x33 ./src/lpc17xx_pinsel.o
+ .ARM.attributes
+                0x000003c9       0x33 ./src/lpc17xx_pwm.o
+ .ARM.attributes
+                0x000003fc       0x33 ./src/lpc17xx_qei.o
+ .ARM.attributes
+                0x0000042f       0x33 ./src/lpc17xx_rit.o
+ .ARM.attributes
+                0x00000462       0x33 ./src/lpc17xx_rtc.o
+ .ARM.attributes
+                0x00000495       0x33 ./src/lpc17xx_spi.o
+ .ARM.attributes
+                0x000004c8       0x33 ./src/lpc17xx_ssp.o
+ .ARM.attributes
+                0x000004fb       0x33 ./src/lpc17xx_timer.o
+ .ARM.attributes
+                0x0000052e       0x33 ./src/lpc17xx_uart.o
+ .ARM.attributes
+                0x00000561       0x33 ./src/lpc17xx_wdt.o
+ .ARM.attributes
+                0x00000594       0x33 ./src/main.o
+ .ARM.attributes
+                0x000005c7       0x33 ./src/monitor.o
+ .ARM.attributes
+                0x000005fa       0x33 ./src/rtc_cal.o
+ .ARM.attributes
+                0x0000062d       0x33 ./src/spi_sd_lpc17xx.o
+ .ARM.attributes
+                0x00000660       0x21 ./src/startup_LPC17xx.o
+ .ARM.attributes
+                0x00000681       0x33 ./src/syscall.o
+ .ARM.attributes
+                0x000006b4       0x33 C:\nxp\LPCXpresso_5.2.4_2122\workspace\CMSISv2p00_LPC17xx\Debug\libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .ARM.attributes
+                0x000006e7       0x33 c:/nxp/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(__weak__main.o)
+ .ARM.attributes
+                0x0000071a       0x21 c:/nxp/lpcxpresso_5.2.4_2122/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/armv7-m\libcr_eabihelpers.a(division.o)
+
+.stack          0x00000000      0x300
+ .stack         0x00000000      0x300 ./src/startup_LPC17xx.o
+                0x00000000                __cs3_stack_mem
+
+.heap           0x00000000     0x1000
+ .heap          0x00000000     0x1000 ./src/startup_LPC17xx.o
+                0x00000000                __cs3_heap_start
+                0x00001000                __cs3_heap_end
+
+.debug_frame    0x00000000     0x3920
+ .debug_frame   0x00000000       0x48 ./src/ccsbcs.o
+ .debug_frame   0x00000048      0x208 ./src/comm.o
+ .debug_frame   0x00000250       0xf4 ./src/cr_startup_lpc176x.o
+ .debug_frame   0x00000344       0xcc ./src/diskio.o
+ .debug_frame   0x00000410       0x30 ./src/fattime.o
+ .debug_frame   0x00000440      0x670 ./src/ff.o
+ .debug_frame   0x00000ab0       0x94 ./src/ff_test_term.o
+ .debug_frame   0x00000b44      0x1ac ./src/lpc17xx_adc.o
+ .debug_frame   0x00000cf0      0x254 ./src/lpc17xx_can.o
+ .debug_frame   0x00000f44       0xe4 ./src/lpc17xx_clkpwr.o
+ .debug_frame   0x00001028       0xb0 ./src/lpc17xx_dac.o
+ .debug_frame   0x000010d8      0x2fc ./src/lpc17xx_emac.o
+ .debug_frame   0x000013d4       0x84 ./src/lpc17xx_gpdma.o
+ .debug_frame   0x00001458      0x2c4 ./src/lpc17xx_gpio.o
+ .debug_frame   0x0000171c      0x2c8 ./src/lpc17xx_i2c.o
+ .debug_frame   0x000019e4      0x290 ./src/lpc17xx_i2s.o
+ .debug_frame   0x00001c74      0x1b8 ./src/lpc17xx_mcpwm.o
+ .debug_frame   0x00001e2c       0x64 ./src/lpc17xx_nvic.o
+ .debug_frame   0x00001e90       0xbc ./src/lpc17xx_pinsel.o
+ .debug_frame   0x00001f4c      0x1d0 ./src/lpc17xx_pwm.o
+ .debug_frame   0x0000211c      0x2b0 ./src/lpc17xx_qei.o
+ .debug_frame   0x000023cc       0xf0 ./src/lpc17xx_rit.o
+ .debug_frame   0x000024bc      0x28c ./src/lpc17xx_rtc.o
+ .debug_frame   0x00002748      0x1c8 ./src/lpc17xx_spi.o
+ .debug_frame   0x00002910      0x280 ./src/lpc17xx_ssp.o
+ .debug_frame   0x00002b90      0x1e8 ./src/lpc17xx_timer.o
+ .debug_frame   0x00002d78      0x42c ./src/lpc17xx_uart.o
+ .debug_frame   0x000031a4       0xf0 ./src/lpc17xx_wdt.o
+ .debug_frame   0x00003294      0x13c ./src/main.o
+ .debug_frame   0x000033d0      0x144 ./src/monitor.o
+ .debug_frame   0x00003514       0x8c ./src/rtc_cal.o
+ .debug_frame   0x000035a0      0x344 ./src/spi_sd_lpc17xx.o
+ .debug_frame   0x000038e4       0x3c C:\nxp\LPCXpresso_5.2.4_2122\workspace\CMSISv2p00_LPC17xx\Debug\libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)

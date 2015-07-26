@@ -1,0 +1,7 @@
+23:07:40 **** Clean-only build of configuration Debug for project uart ****
+make clean 
+rm -rf  ./src/RITtimer.o ./src/cr_startup_lpc17.o ./src/debug.o ./src/main.o ./src/uart.o  ./src/RITtimer.d ./src/cr_startup_lpc17.d ./src/debug.d ./src/main.d ./src/uart.d  uart.axf
+ 
+
+23:07:40 Build Finished (took 125ms)
+

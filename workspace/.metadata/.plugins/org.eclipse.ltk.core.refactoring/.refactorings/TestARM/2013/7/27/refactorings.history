@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;TestARM/src/varios&apos; to &apos;varios.c&apos;" description="Rename resource &apos;varios&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/varios" name="varios.c" stamp="1372815446379" updateReferences="true"/>
+</session>

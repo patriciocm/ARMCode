@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;TestARM/src/xbee&apos; to &apos;xbee.c&apos;" description="Rename resource &apos;xbee&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/xbee" name="xbee.c" stamp="1383507975349" updateReferences="true"/>
+</session>

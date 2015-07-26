@@ -1,0 +1,295 @@
+/*
+===============================================================================
+ Name        : main.c
+ Author      :
+ Version     :
+ Copyright   : Copyright (C)
+ Description : main definition
+===============================================================================
+*/
+
+#ifdef __USE_CMSIS
+#include "LPC17xx.h"
+#endif
+
+#include <cr_section_macros.h>
+#include <NXP/crp.h>
+#include <math.h>
+
+// Variable to store CRP value in. Will be placed automatically
+// by the linker when "Enable Code Read Protect" selected.
+// See crp.h header for more information
+__CRP const unsigned int CRP_WORD = CRP_NO_CRP ;
+
+
+// TODO: insert other include files here
+#include "adc.h"
+#include "timer.h"
+#include "debug.h"
+
+// TODO: insert other definitions and declarations here
+
+extern volatile uint32_t ADC0Value[ADC_NUM];
+extern volatile uint32_t ADC0IntDone;
+
+extern volatile uint32_t overrun;
+extern volatile uint32_t goodmeasures;
+extern volatile uint8_t vectorActivo;
+extern volatile uint8_t vectorReady;
+
+//Contador de interrupciones del timer0
+extern volatile uint32_t timer0_m0_counter;
+
+volatile uint32_t VectorTiempoMain[MAX_TAMANIO*2];
+volatile uint16_t VectorMedicionesMain[MAX_TAMANIO*2];
+
+
+extern volatile uint16_t VectorMediciones1[MAX_TAMANIO];
+//extern volatile uint32_t VectorTiempo1[MAX_TAMANIO];
+extern volatile uint16_t VectorMediciones2[MAX_TAMANIO];
+//extern volatile uint32_t VectorTiempo2[MAX_TAMANIO];
+//volatile uint32_t medicionesIniciales[MAX_TAMANIO];
+volatile uint32_t SysTickCount;		/* counts 10ms timeTicks */
+
+
+/*----------------------------------------------------------------------------
+  SysTick_Handler
+ *----------------------------------------------------------------------------*/
+void SysTick_Handler(void)
+{
+    SysTickCount++; 				/* increment counter necessary in Delay() */
+}
+
+
+int main(void)
+{
+	//Definiciones utilizadas por el ADC
+	float SUPPLY_VOLTAGE = 3.3;    //en volts
+	double ADC_COUNT_MAX = 4095;
+	float ADC_STEP = SUPPLY_VOLTAGE/ADC_COUNT_MAX;
+	float GAP_VOLTAGE = 0.030; //en volts
+	int GAP_COUNT = GAP_VOLTAGE/ADC_STEP;
+	float CIENMIL = 100000;
+	float CONSTANTE_TIMER = 1136/CIENMIL;
+
+
+	//Update variable SystemCoreClock
+	SystemCoreClockUpdate();
+#ifdef DEBUG
+    	debug_printf("CPU Clock:%dMHz\n", SystemCoreClock/1000000);
+    	debug_printf("ADC STEP:%d.%04dV\n", (int)ADC_STEP, (int)((ADC_STEP-(int)ADC_STEP)*10000));
+    	debug_printf("GAP VOLTAGE:%d.%03dV\n", (int)GAP_VOLTAGE, (int)((GAP_VOLTAGE-(int)GAP_VOLTAGE)*1000));
+    	debug_printf("GAP COUNT:%d\n", (int) GAP_COUNT);
+    	debug_printf_flush();
+#endif
+
+	//Inicializar ADC
+	ADCInit(ADC_CLK);
+
+	//Inicializar Timer0
+	init_timer( 0 );
+	enable_timer(0);
+
+	//Calculo de valor de tension media utilizado para comparar si se guardan futuros valores medidos
+	uint32_t sumatoria = 0;
+	uint32_t cantidadMuestras = 0;
+	uint32_t i;
+
+	//Iniciar ADC
+	ADCBurstRead();
+
+	while (cantidadMuestras < MAX_TAMANIO*5 )
+	{
+		while (!vectorReady)
+		{}
+
+		if(vectorReady == 1)
+		{
+			for( i=0 ; i <MAX_TAMANIO; i++)
+			{	sumatoria += VectorMediciones1[i];
+			}
+		}
+		else
+		{
+			for( i=0 ; i <MAX_TAMANIO; i++)
+			{	sumatoria += VectorMediciones2[i];
+			}
+		}
+		vectorReady = 0;
+		cantidadMuestras+=MAX_TAMANIO;
+	}
+
+	//Detener ADC
+	LPC_ADC->ADCR &= ~(0x01 << 16);
+
+	uint32_t promedioCuentas = sumatoria/cantidadMuestras;
+	double promedioTension = promedioCuentas*ADC_STEP;
+
+	#ifdef DEBUG
+    		debug_printf("Valor promedio (V): %d.%03dV\n", (int)promedioTension, (int)((promedioTension-(int)promedioTension)*1000));
+    		debug_printf("Valor promedio (Cuentas): %d\n", (int)promedioCuentas);
+	#endif
+
+    //Inicializar vector de MedicionesMain
+    VectorMedicionesMain[0] = promedioCuentas;
+    VectorTiempoMain[0] = 0;
+
+	uint8_t imprimir = 1;
+	int32_t lastMain = 0;
+	uint32_t auxMuestra[4];
+	uint32_t auxTiempo[4];
+	uint32_t difference = 0;
+	uint8_t largoSenial = 0;
+
+	//Reset SystickTimer
+	/*
+	SysTick->CTRL  &= ~(0x01 << 0);
+	SysTick->VAL   = 0;
+	SysTick->CTRL  |= (0x01 << 0);
+	*/
+
+	goodmeasures = 0;
+	SysTickCount = 0;
+    timer0_m0_counter = 0;
+
+    vectorActivo = 3;
+    vectorReady = 0;
+
+	//Generar interrupciones de 10ms
+	SysTick_Config(100 * (1000000/100));
+
+	//Iniciar ADC
+    ADCBurstRead();
+
+
+	while(1)
+	{
+		 while(!vectorReady)
+		 {}
+
+		 vectorReady = 0;
+
+		 if(lastMain < 1900)
+		 {
+			 if(VectorMedicionesMain[0] > ADC0Value[0])
+				 difference = VectorMedicionesMain[0] - ADC0Value[0];
+			 else
+				 difference = ADC0Value[0] - VectorMedicionesMain[0];
+
+			 if(difference > GAP_COUNT)
+			 {
+				 switch (largoSenial)
+				 {
+				 	 case 0x00:
+						 auxMuestra[0] = ADC0Value[0];
+						 auxTiempo[0] = timer0_m0_counter;
+						 largoSenial = 1;
+						 break;
+				 	 case 0x01:
+				 		 if( (timer0_m0_counter - auxTiempo[0]) < 10 )
+				 		 {	 auxTiempo[1] = timer0_m0_counter;
+				 			 auxMuestra[1] = ADC0Value[0];
+				 		 	 largoSenial = 2;
+				 		 }
+				 		 else
+				 		 {	 auxTiempo[0] = timer0_m0_counter;
+				 			 auxMuestra[0] = ADC0Value[0];
+						 	 largoSenial = 1;
+				 		 }
+				 		 break;
+				 	 case 0x02:
+						 if( (timer0_m0_counter - auxTiempo[0]) < 10 )
+						 {	 auxTiempo[2] = timer0_m0_counter;
+							 auxMuestra[2] = ADC0Value[0];
+							 largoSenial = 3;
+						 }
+						 else
+						 {	 auxTiempo[0] = timer0_m0_counter;
+							 auxMuestra[0] = ADC0Value[0];
+							 largoSenial = 1;
+						 }
+						 break;
+				 	 case 0x03:
+				 		 if( (timer0_m0_counter - auxTiempo[1]) < 10 )
+						 {	 auxTiempo[3] = timer0_m0_counter;
+			 			 	 auxMuestra[3] = ADC0Value[0];
+			 			 	 lastMain++;
+			 			 	 VectorTiempoMain[lastMain] = auxTiempo[0];
+			 			 	 VectorMedicionesMain[lastMain] = auxMuestra[0];
+			 			 	 lastMain++;
+			 			 	 VectorTiempoMain[lastMain] = auxTiempo[1];
+			 			 	 VectorMedicionesMain[lastMain] = auxMuestra[1];
+			 			 	 lastMain++;
+			 			 	 VectorTiempoMain[lastMain] = auxTiempo[2];
+			 			     VectorMedicionesMain[lastMain] = auxMuestra[2];
+			 			     lastMain++;
+			 			     VectorTiempoMain[lastMain] = auxTiempo[3];
+			 			     VectorMedicionesMain[lastMain] = auxMuestra[3];
+			 			 	 /*
+				 			 for( i=3 ; i>0; i--);
+							 {	 VectorTiempoMain[lastMain+i] = auxTiempo[i-1];
+				 				 VectorMedicionesMain[lastMain+i] = auxMuestra[i-1];
+							 }
+
+							 lastMain=lastMain+3;*/
+							 largoSenial = 4;
+						 }
+						 else
+						 {	 auxTiempo[0] = timer0_m0_counter;
+							 auxMuestra[0] = ADC0Value[0];
+							 largoSenial = 1;
+						 }
+						 break;
+				 	 case 0x04:
+				 		 if( (timer0_m0_counter - VectorTiempoMain[lastMain]) < 10 )
+						 {
+							lastMain++;
+							VectorTiempoMain[lastMain] = timer0_m0_counter;
+							VectorMedicionesMain[lastMain] = ADC0Value[0];
+						 }
+				 		 else
+				 		 {
+				 			auxTiempo[0] = timer0_m0_counter;
+							auxMuestra[0] = ADC0Value[0];
+							largoSenial = 1;
+				 		 }
+				 		 break;
+				 	  default:
+				 		 break;
+				 }
+			 }
+		 }
+		 else
+		 {
+			 LPC_ADC->ADCR &= ~(0xFF << 16);
+			 if(imprimir)
+			 {
+				 double tensionMedida = 0;
+				 double tiempoMedido = 0;
+
+				 debug_printf("Statistics: Cantidad de Overruns: %d . ", overrun);
+				 debug_printf("Cantidad de GoodMeasures: %d\n", goodmeasures);
+
+				 for( i=0 ; i<2*MAX_TAMANIO; i++)
+				 {	 tensionMedida = VectorMedicionesMain[i]*ADC_STEP;
+				 	 tiempoMedido = VectorTiempoMain[i]*CONSTANTE_TIMER;
+				 	 debug_printf("%d.%03d ", (int)tiempoMedido, (int)((tiempoMedido-(int)tiempoMedido)*1000));
+					 debug_printf("%d.%03d\n", (int)tensionMedida, (int)((tensionMedida-(int)tensionMedida)*1000));
+				 }
+				 imprimir = 0;
+			 }
+		 }
+	}
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+

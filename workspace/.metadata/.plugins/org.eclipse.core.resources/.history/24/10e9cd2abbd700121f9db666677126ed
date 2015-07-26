@@ -1,0 +1,214 @@
+/*
+===============================================================================
+ Name        : main.c
+ Author      : 
+ Version     :
+ Copyright   : Copyright (C) 
+ Description : main definition
+===============================================================================
+*/
+
+#ifdef __USE_CMSIS
+#include "LPC17xx.h"
+#endif
+
+#include <cr_section_macros.h>
+#include <NXP/crp.h>
+#include <math.h>
+
+// Variable to store CRP value in. Will be placed automatically
+// by the linker when "Enable Code Read Protect" selected.
+// See crp.h header for more information
+__CRP const unsigned int CRP_WORD = CRP_NO_CRP ;
+
+
+// TODO: insert other include files here
+#include "adc.h"
+#include "timer.h"
+#include "debug.h"
+
+// TODO: insert other definitions and declarations here
+#define MAX_TAMANIO 40*10
+
+extern volatile uint32_t ADC0Value[ADC_NUM];
+extern volatile uint32_t ADC0IntDone;
+
+extern volatile uint32_t overrun;
+extern volatile uint32_t goodmeasures;
+
+
+//Contador de interrupciones del timer0
+extern volatile uint32_t timer0_m0_counter;
+
+volatile uint32_t VectorMediciones[MAX_TAMANIO];
+volatile uint32_t VectorTiempo[MAX_TAMANIO];
+volatile uint32_t medicionesIniciales[MAX_TAMANIO];
+volatile uint32_t SysTickCount;		/* counts 10ms timeTicks */
+
+
+/*----------------------------------------------------------------------------
+  SysTick_Handler
+ *----------------------------------------------------------------------------*/
+void SysTick_Handler(void)
+{
+    SysTickCount++; 				/* increment counter necessary in Delay() */
+}
+
+
+int main(void)
+{
+	//Definiciones utilizadas por el ADC
+	float SUPPLY_VOLTAGE = 3.3;    //en volts
+	double ADC_COUNT_MAX = 4095;
+	float ADC_STEP = SUPPLY_VOLTAGE/ADC_COUNT_MAX;
+	float GAP_VOLTAGE = 0.030; //en milivolts
+	int GAP_COUNT = GAP_VOLTAGE/ADC_STEP;
+
+
+	//Update variable SystemCoreClock
+	SystemCoreClockUpdate();
+#ifdef DEBUG
+    	debug_printf("CPU Clock:%dMHz\n", SystemCoreClock/1000000);
+    	debug_printf("ADC STEP:%d.%04dV\n", (int)ADC_STEP, (int)((ADC_STEP-(int)ADC_STEP)*10000));
+    	debug_printf("GAP VOLTAGE:%d.%03dV\n", (int)GAP_VOLTAGE, (int)((GAP_VOLTAGE-(int)GAP_VOLTAGE)*1000));
+    	debug_printf("GAP COUNT:%d\n", (int) GAP_COUNT);
+    	debug_printf_flush();
+#endif
+
+	//Inicializar ADC
+	ADCInit(ADC_CLK);
+
+	//Generar interrupciones de 10ms
+	SysTick_Config(52 * (1000000/100));
+
+	//Inicializar Timer0
+	init_timer( 0 );
+
+	//uint32_t count = 0;
+	uint32_t last = 0;
+	uint32_t difference = 0;
+	uint8_t imprimir = 1;
+
+	enable_timer(0);
+	SysTickCount = 0;
+
+	//Calculo de valor de tension media utilizado para comparar si se guardan futuros valores medidos
+	uint32_t sumatoria = 0;
+	uint32_t cantidadMuestras = 0;
+	while( SysTickCount < 400 )
+	{
+		ADC0Read( 0 );
+		while ( !ADC0IntDone );
+		ADC0IntDone = 0;
+
+		cantidadMuestras++;
+		sumatoria += ADC0Value[0];
+		//medicionesIniciales[cantidadMuestras-1] = ADC0Value[0];
+
+	}
+
+	VectorTiempo[0] = 0x00;
+	VectorMediciones[0] = sumatoria/cantidadMuestras;
+	double promedio = VectorMediciones[0]*ADC_STEP;
+
+	#ifdef DEBUG
+    		debug_printf("Valor promedio (V): %d.%03dV\n", (int)promedio, (int)((promedio-(int)promedio)*1000));
+    		debug_printf("Valor promedio (Cuentas): %d\n", VectorMediciones[0]);
+	#endif
+
+    timer0_m0_counter = 0;
+	while(1)
+	{
+		/*#######Codigo para probar las interrupciones del SysTick Timer############
+ 		while( SysTickCount < 100 )
+		{
+			__WFI();
+		}
+
+		SysTickCount = 0;
+		count++;
+
+		#ifdef DEBUG
+    		debug_printf("Interrupcion de Timer:%d \n", count);
+    		debug_printf_flush();
+		#endif
+		#################################################*/
+
+/*		#######Codigo para probar las interrupciones del Timer0############
+
+ 		while( SysTickCount != 10)
+		{
+ 			__WFI();
+		}
+
+ 		disable_timer( 0 );
+
+		#ifdef DEBUG
+    		debug_printf("Cantidad de cuentas del TC(Timer Counter):%d \n", timer0_m0_counter);
+    		debug_printf_flush();
+		#endif
+
+
+    	while(1)
+    	{	//Cualquier variable para jugar
+    		ADC0IntDone++;
+   		}*/
+
+		/*#################################################*/
+
+		 /*#######Codigo para muestrear con el ADC############*/
+
+		 if(last < MAX_TAMANIO)
+		 {	//Tomo muestra y la guardo en ADC0Value[0]
+			 ADC0Value[0] = 0x0000;
+			 ADC0Read( 0 );
+			 while ( !ADC0IntDone );
+			 ADC0IntDone = 0;
+
+
+			 if(VectorMediciones[0] > ADC0Value[0])
+			 	 difference = VectorMediciones[0] - ADC0Value[0];
+			 else
+			 	 difference = ADC0Value[0] - VectorMediciones[0];
+
+
+			 if(difference > GAP_COUNT)
+			 {
+				 last++;
+				 VectorTiempo[last] = timer0_m0_counter;
+				 VectorMediciones[last] = ADC0Value[0];
+		 	 }
+		 }
+		 else
+		 {
+			 if(imprimir)
+			 {
+				 uint32_t i;
+				 double tensionMedida = 0;
+
+				 debug_printf("Statistics: Cantidad de Overruns: %d . ", overrun);
+				 debug_printf("Cantidad de GoodMeasures: %d\n", goodmeasures);
+
+				 for( i=0 ; i<MAX_TAMANIO; i++)
+				 {	 tensionMedida = VectorMediciones[i]*ADC_STEP;
+				 	 debug_printf("%d ",  VectorTiempo[i]);
+					 debug_printf("%d.%03d\n", (int)tensionMedida, (int)((tensionMedida-(int)tensionMedida)*1000));
+				 }
+			 }
+			 imprimir = 0;
+		 }
+		/* ############################################*/
+	}
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
